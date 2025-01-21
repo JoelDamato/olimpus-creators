@@ -77,7 +77,7 @@ export default function WorkshopLanding() {
   }}
 >
 
-      {/* Header */}<img src="https://gopitchering.com/wp-content/uploads/2024/07/704851e0a88209f5f3717dd586768749_1200_80.webp" className="my-5" alt="" />
+      {/* Header */}<img src="/gopit.png" className="my-5" alt="" />
       <h2 className="text-lg md:text-2xl text-white text-center font-medium">
           Conoce el NUEVO Trabajo que va a revolucionar el Mercado Digital en 2025…
           </h2>
