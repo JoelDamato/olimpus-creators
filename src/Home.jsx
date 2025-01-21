@@ -59,7 +59,6 @@ const Home = () => {
   </div>
 )}
 
-
       <button
         className="btn explore absolute top-1/2 left-1/2 transform -translate-x-1/2 translate-y-[225px] px-4 py-2 text-black bg-white hover:bg-yellow-500/50 font-semibold shadow-lg"
       >
