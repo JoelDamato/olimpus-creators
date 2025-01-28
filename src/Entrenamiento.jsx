@@ -17,7 +17,7 @@ export default function WorkshopLanding() {
         console.log(`Tiempo actual del video: ${data.currentTime}s`);
 
         // Mostrar contenido adicional si el tiempo alcanza 180 segundos
-        if (data.currentTime >= 180) {
+        if (data.currentTime >= 18) {
           setShowExtraContent(true);
         }
       }
@@ -135,7 +135,7 @@ Quiero Acceder a Go Pitchering
 
           <div className="relative mb-12 w-full">
             <img
-              src="https://gopitchering.com/wp-content/uploads/2024/08/thgrtdfx.png"
+              src="/mockup-completo.png"
               alt="VSL Method Products"
               className="w-full h-auto"
             />
@@ -242,7 +242,7 @@ Quiero ser un Pitcher Partner
 </h2>
             <div className="flex gap-8 items-center">
               <img 
-                src="https://gopitchering.com/wp-content/uploads/2024/08/Crea-el-Curso-Perfecto.png"
+                src="/libro.png"
                 alt="7 Minute Closing"
                 className="w-32 sm:w-48 h-auto"
               />
@@ -256,7 +256,7 @@ Quiero ser un Pitcher Partner
 
             <div className="flex gap-8 items-center">
               <img 
-                src="https://gopitchering.com/wp-content/uploads/2024/08/Guia-de-Lanzamiento-Predecible-en-7-Dias.png"
+                src="/Mac-Hotmart.png"
                 alt="One Page Formula"
                 className="w-32 sm:w-48 h-auto"
               />
@@ -271,7 +271,7 @@ Quiero ser un Pitcher Partner
 
             <div className="flex gap-8 items-center">
               <img 
-                src="https://gopitchering.com/wp-content/uploads/2024/08/Prospecta-tu-Primer-Influencer-Asegurado.png"
+                src="/Influencer.png"
                 alt="One Page Formula"
                 className="w-32 sm:w-48 h-auto"
               />
@@ -285,7 +285,7 @@ Quiero ser un Pitcher Partner
           </div>
           <div className="flex gap-8 items-center">
               <img 
-                src="https://gopitchering.com/wp-content/uploads/2024/08/regalo-point.png"
+                src="/contrato.png"
                 alt="One Page Formula"
                 className="w-32 sm:w-48 h-auto"
               />
@@ -304,16 +304,11 @@ Quiero ser un Pitcher Partner
         <h1 className="animate-pulse bg-gradient-to-b from-black/20 via-[#013557] to-black/2 rounded-2xl text-4xl font-bold text-white p-2 mb-4">BONUS TEMPORALES:</h1>
 
         <div className="relative -mx-6 md:-mx-8 lg:-mx-12">
-        <div className="flex flex-col gap-6 mb-4">
+        <div className="flex flex-col items-center gap-6 mb-4">
         <img
-    className="w-full rounded-lg hover:scale-105 transform transition duration-300 -translate-x-4"
-    src="https://gopitchering.com/wp-content/uploads/2024/08/FDSSDDS-1024x521.png"
+    className="w-3/4 rounded-lg hover:scale-105 transform transition duration-300 -translate-x-4"
+    src="/docs.png"
     alt="Imagen 1"
-  />
-  <img
-    className="w-full rounded-lg hover:scale-105 transform transition duration-300 -translate-x-4"
-    src="https://gopitchering.com/wp-content/uploads/2024/08/BONUS-2-1024x521.png"
-    alt="Imagen 2"
   />
 </div>
 
