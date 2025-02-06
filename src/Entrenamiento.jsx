@@ -151,7 +151,7 @@ export default function WorkshopLanding() {
           <div className="flex flex-col gap-8">
             <div className="flex flex-col md:flex-row items-center text-left p-4">
               <img src="/discord.png" alt="Discord" className="w-80 md:w-80 mx-auto" />
-              <div className="mt-4 hidden md:block md:mt-8">
+              <div className="mt-4 md:mt-8">
                 <p className="text-2xl mb-8">
                   Están consiguiendo muy rápido sus influencers gracias a nuestra comunidad de Pitcher Partner
                 </p>
