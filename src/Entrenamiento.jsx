@@ -32,12 +32,7 @@ export default function WorkshopLanding() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimeLeft((prevTime) => {
-        if (prevTime <= 0) {
-          return 3600000; // Reinicia el cronómetro a 1 hora
-        }
-        return prevTime - 1000;
-      });
+      setTimeLeft((prevTime) => (prevTime <= 0 ? 3600000 : prevTime - 1000));
     }, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -57,24 +52,23 @@ export default function WorkshopLanding() {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center"
+      className="min-h-screen flex flex-col items-center justify-center overflow-x-hidden"
       style={{
         background: "linear-gradient(to right, black, #013557 50%, black 100%)",
         fontFamily: "Lato, sans-serif",
       }}
     >
-      {/* Header */}
-      <img src="/gopit.png" className="my-5" alt="" />
-      <h2 className="text-lg md:text-2xl text-white text-center font-medium">
-        Para trabajar digital en 2025 no necesitas miles de seguidores
-        ni invertir en publicidad, este es el camino más rápido...
+      {/* HEADER */}
+      <img src="/gopit.png" className="my-5" alt="Logo" />
+      <h2 className="text-lg md:text-2xl text-white text-center font-medium px-4">
+        Para trabajar digital en 2025 no necesitas miles de seguidores ni invertir en publicidad, este es el camino más rápido...
       </h2>
-      <div className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 md:w-full mx-5 shadow-lg mt-7">
+
+
+      <div className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 w-full mx-5 shadow-lg mt-7">
         <header className="text-center">
           <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold leading-tight mb-2">
-            Conviértete en Pitcher Partner y
-            gana grandes comisiones con un
-            método probado en solo 7 días
+            Conviértete en Pitcher Partner y gana grandes comisiones con un método probado en solo 7 días
           </h1>
           <p className="text-xl text-gray-700 mb-3">
             <span className="text-[#f9bc66] font-bold">
@@ -89,77 +83,55 @@ export default function WorkshopLanding() {
             src="https://player-vz-7cd4a4ef-9e2.tv.pandavideo.com/embed/?v=a77aa388-c94a-4f56-aad1-c3c67de4a6a1"
             style={{ border: "none", width: "100%", height: "100%" }}
             allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
-            className="aspect-video max-w-full"
+            className="aspect-video w-full"
+            title="Video"
           />
         </div>
 
-        {/* Sección de Nuevo Producto */}
-        {!showExtraContent ? (
-          <button
-            onClick={() =>
-              window.open(
-                "https://pay.hotmart.com/O94296249S?checkoutMode=10&bid=1725551295569",
-                "_blank"
-              )
-            }
-            className="bg-gradient-to-r from-black via-[#013557] to-black text-white text-xl md:text-2xl font-medium py-4 px-8 rounded-lg w-full max-w-2xl mx-auto block mb-16 transition-all duration-300 hover:translate-x-1 hover:translate-x-[-5px]"
-            style={{ backgroundSize: "200%", backgroundPosition: "center" }}
-          >
-            Quiero Acceder a Go Pitchering
-          </button>
-        ) : null}
+     
 
-        {showExtraContent && (
           <div>
             <section className="w-full max-w-4xl px-4 mt-2 bg-white">
-              <h1
-                className="bg-gradient-to-r from-black via-[#013557] to-black text-white font-bold text-center text-3xl md:text-2xl py-4 px-8 rounded-lg w-full max-w-2xl mx-auto block mb-16 transition-all duration-300"
-              >
+              <h1 className="bg-gradient-to-r from-black via-[#013557] to-black text-white font-bold text-center text-3xl md:text-2xl py-4 px-8 rounded-lg w-full max-w-2xl mx-auto block mb-16 transition-all duration-300">
                 Aprende a ser un PITCHER PARTNER
               </h1>
 
               <div className="relative mb-12 w-full">
-                <img src="/mockup.png" alt="Image Mockup" className="w-full h-auto" />
+                <img src="/mockup.png" alt="Mockup" className="w-full h-auto" />
               </div>
 
               <div className="flex flex-col items-center text-center p-6 w-11/12 md:w-3/4 mx-auto">
-                {/* Título principal */}
                 <h2 className="text-xl font-bold mb-6 leading-tight">
                   Este es el momento ideal para hacer lo que menos del 1% de los emprendedores está haciendo:
                 </h2>
-                {/* Contenedor de los textos con flechas */}
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-3">
                   {/* Bloque 1 */}
-                  <div className="flex flex-col md:flex-row items-center justify-between">
-                    <img src="/flecha1.png" alt="Flecha" className="w-16 h-16 -mt-12" />
-                    <p className="text-2xl font-semibold flex-grow mx-4">
+                  <div className="flex flex-col">
+                    <p className="text-lg md:text-2xl  font-semibold flex-grow ">
                       Dejar de depender <span className="font-normal">de modelos de negocios saturados o que no son aplicables para vos...</span>
                     </p>
                   </div>
                   {/* Bloque 2 */}
-                  <div className="flex flex-col md:flex-row items-center justify-between mt-8">
-                    <p className="text-2xl font-semibold flex-grow mx-4">
+                  <div className="flex flex-col md:flex-row items-center justify-between md:mt-8">
+                    <p className="text-lg md:text-2xl font-semibold flex-grow ">
                       Comenzar tu negocio digital <span className="font-normal">en los próximos 30 días sin margen de error sin dejar de hacer lo que estás haciendo hoy en día.</span>
                     </p>
-                    <img src="/flecha2.png" alt="Flecha" className="w-16 h-16 -mt-24" />
                   </div>
                   {/* Bloque 3 */}
-                  <div className="flex flex-col md:flex-row items-center justify-between mt-8">
-                    <img src="/flecha1.png" alt="Flecha" className="w-16 h-16 -mt-24" />
-                    <p className="text-2xl font-normal flex-grow mx-4">
+                  <div className="flex flex-col md:flex-row items-center justify-between md:mt-8">
+                    <p className="text-lg  md:text-2xl font-normal flex-grow ">
                       No necesitas salir a prospectar todos los días, ya que con un solo influencer basta.
                     </p>
                   </div>
                   {/* Bloque 4 */}
-                  <div className="flex flex-col md:flex-row items-center justify-between mt-8">
-                    <p className="text-2xl font-semibold flex-grow mx-4">
+                  <div className="flex flex-col md:flex-row items-center justify-between ">
+                    <p className="text-2xl font-semibold flex-grow ">
                       Esto NO es OTRO modelo de negocios <span className="font-normal">más como te presentan los demás allá afuera.</span>
                     </p>
-                    <img src="/flecha2.png" alt="Flecha" className="w-16 h-16 -mt-24" />
                   </div>
                   {/* Bloque 5 */}
-                  <div className="flex items-center justify-between mt-8">
-                    <p className="text-2xl font-semibold flex-grow mx-4">
+                  <div className="flex items-center justify-between">
+                    <p className="text-2xl font-semibold flex-grow ">
                       Esto es TU propio negocio <span className="font-bold">ESTABLE Y RENTABLE PARA LOS PRÓXIMOS 5 AÑOS...</span>
                     </p>
                   </div>
@@ -167,74 +139,58 @@ export default function WorkshopLanding() {
               </div>
             </section>
           </div>
-        )}
+    
       </div>
 
       {/* REFERENCIAS */}
-      <section className="text-white py-16 px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8">
+      <section className="w-full text-white text-center">
+   
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-1 mt-2">
             Conoce como otras personas como vos...
           </h2>
           <div className="flex flex-col gap-8">
-            {/* Bloque de referencia 1 */}
             <div className="flex flex-col md:flex-row items-center text-left p-4">
-              <img src="/discord.png" alt="" className="w-48 md:w-80 mx-auto" />
-              <div className="mt-4 md:mt-[5rem]">
+              <img src="/discord.png" alt="Discord" className="w-80 md:w-80 mx-auto" />
+              <div className="mt-4 hidden md:block md:mt-8">
                 <p className="text-2xl mb-8">
                   Están consiguiendo muy rápido sus influencers gracias a nuestra comunidad de Pitcher Partner
                 </p>
                 <p className="text-md">Influencers sobran, faltan Pitcher Partner..</p>
-                <div className="flex gap-5 items-end mt-5">
-                  <img src="/blanca1.png" alt="" className="w-20" />
+                <div className="flex gap-5 items-end mt-5 justify-center">
+                  <img src="/blanca1.png" alt="Blanca1" className="w-20" />
                   <p className="text-xl font-semibold">
                     Alexis consiguió 3 en una semana sin tener seguidores ni experiencia previa
                   </p>
                 </div>
-                <img src="/blanca2.png" alt="" className="mx-auto md:ml-[15rem] mt-5 mb-[-5rem] w-20" />
+                <img src="/blanca2.png" alt="Blanca2" className="hidden md:block mx-auto md:ml-auto mt-5 mb-[-5px] w-20" />
               </div>
             </div>
 
-            {/* Bloque de referencia 2 */}
             <div className="flex flex-col md:flex-row gap-6 p-6">
-              <img
-                src="/trofeo.png"
-                alt="TROFEO"
-                className="w-40 md:w-[10rem] rounded-md mb-4 mx-auto"
-              />
+              <img src="/trofeo.png" alt="Trofeo" className="w-40 md:w-[10rem] rounded-md mb-4 mx-auto" />
               <div className="mx-auto">
                 <img src="/ref1.png" alt="Referencia 1" className="w-full max-w-sm md:ml-5" />
               </div>
             </div>
 
-            {/* Bloque de referencia 3 */}
             <div className="flex flex-col md:flex-row p-6 rounded-lg gap-6">
-              <img
-                src="/trofeo.png"
-                alt="TROFEO"
-                className="w-40 md:w-[10rem] rounded-md mb-4 mx-auto"
-              />
+              <img src="/trofeo.png" alt="Trofeo" className="w-40 md:w-[10rem] rounded-md mb-4 mx-auto" />
               <div className="flex flex-col items-center mx-auto">
                 <div className="flex flex-col md:flex-row items-center">
                   <p className="text-xl font-semibold text-center md:text-left">
                     Paula cerró su primer influencer de 69K en 9 días sin usar Instagram
                   </p>
-                  <img src="/flecha3.png" alt="" className="w-20 ml-2 mt-2" />
+                  <img src="/flecha3.png" alt="Flecha" className="w-20 ml-2 mt-2" />
                 </div>
                 <img src="/ref3.png" alt="Referencia 3" className="w-full max-w-sm" />
               </div>
             </div>
 
-            {/* Bloque de referencia 4 */}
             <div className="flex flex-col md:flex-row p-6 rounded-lg gap-6">
-              <img
-                src="/trofeo.png"
-                alt="TROFEO"
-                className="w-40 md:w-[10rem] rounded-md mb-4 mx-auto"
-              />
+              <img src="/trofeo.png" alt="Trofeo" className="w-40 md:w-[10rem] rounded-md mb-4 mx-auto" />
               <div className="flex flex-col items-center mx-auto">
                 <div className="flex flex-col items-center md:items-end justify-center">
-                  <img src="/blanca4e.png" className="w-20" alt="" />
+                  <img src="/blanca4e.png" className="hidden md:block w-20" alt="Blanca4e" />
                   <p className="text-xl font-semibold text-center md:text-right">
                     Laura cerró su primer influencer sin conocimiento y ya hizo +3100 USD
                   </p>
@@ -243,20 +199,23 @@ export default function WorkshopLanding() {
               </div>
             </div>
           </div>
-        </div>
+
+        </section>
+
 
         {/* BULLETS POINTS */}
-        <div className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 md:w-full mx-5 shadow-lg mt-7">
-          <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-8 text-[#f9bc66] border-b-4 border-[#f9bc66] whitespace-nowrap animate-typing">
-            Ahora... Conoce que obtendrás dentro:
-          </h2>
+        <div className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 mx-5 shadow-lg mt-7">
+        <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-8 text-[#f9bc66] border-b-4 border-[#f9bc66] whitespace-normal md:whitespace-nowrap animate-typing">
+  Ahora... Conoce qué obtendrás dentro:
+</h2>
+
           <div className="flex flex-col gap-5 p-5 justify-center items-center mb-5">
             {/* Bloque 1 */}
             <div className="flex flex-col md:flex-row gap-5 items-center">
               <img 
                 src="/bullet1.png"
                 alt="Guía de lanzamiento"
-                className="w-48 md:w-64 lg:w-80 h-[13rem] object-contain"
+                className="w-full max-w-xs sm:max-w-sm h-[13rem] object-contain"
               />
               <div className="text-left text-black tracking-wider">
                 <h4 className="text-xl md:text-3xl font-bold mb-2">
@@ -264,7 +223,6 @@ export default function WorkshopLanding() {
                 </h4>
                 <p className="text-2xl">
                   Aprende a crear lanzamientos predecibles en menos de 7 días con el método Go Pitchering.
-                  Podrás replicar el método hasta convertirte en un lanzador experto sin margen de error.
                 </p>
               </div>
             </div>
@@ -274,14 +232,14 @@ export default function WorkshopLanding() {
               <img 
                 src="/bullet2.png"
                 alt="Crea cursos rentables"
-                className="w-48 md:w-64 lg:w-80 h-[13rem] object-contain"
+                className="w-full max-w-xs sm:max-w-sm h-[13rem] object-contain"
               />
               <div className="text-left text-black tracking-wider">
                 <h4 className="text-xl md:text-3xl font-bold mb-2">
                   CREA CURSOS RENTABLES SIN EXPERIENCIA – Valorada en $197 USD
                 </h4>
                 <p className="text-2xl">
-                  Con un estudio de mercado que te enseñaré a hacer, descubrirás las necesidades de tu audiencia y crearás el curso perfecto para vender de forma rápida y sencilla.
+                  Descubre las necesidades de tu audiencia y crea el curso perfecto para vender de forma rápida y sencilla.
                 </p>
               </div>
             </div>
@@ -291,14 +249,14 @@ export default function WorkshopLanding() {
               <img 
                 src="/bullet3.png"
                 alt="Prospecta tu primer influencer"
-                className="w-48 md:w-64 lg:w-80 h-[13rem] object-contain"
+                className="w-full max-w-xs sm:max-w-sm h-[13rem] object-contain"
               />
               <div className="text-left text-black tracking-wider">
                 <h4 className="text-xl md:text-3xl font-bold mb-2">
                   PROSPECTA TU PRIMER INFLUENCER ASEGURADO – VALOR INVALUABLE
                 </h4>
                 <p className="text-2xl">
-                  Con el estudio de mercado que te enseñaré, descubrirás los problemas de tu audiencia y prospectarás de forma segura a tu primer influencer.
+                  Con el estudio de mercado, descubre los problemas de tu audiencia y prospecta de forma segura a tu primer influencer.
                 </p>
               </div>
             </div>
@@ -308,14 +266,14 @@ export default function WorkshopLanding() {
               <img 
                 src="/bullet4.png"
                 alt="Contrato asegurador de lanzamiento"
-                className="w-48 md:w-64 lg:w-80 h-[13rem] object-contain"
+                className="w-full max-w-xs sm:max-w-sm h-[13rem] object-contain"
               />
               <div className="text-left text-black tracking-wider">
                 <h4 className="text-xl md:text-3xl font-bold mb-2">
                   CONTRATO ASEGURADOR DE LANZAMIENTO – Valorado en $1500 USD
                 </h4>
                 <p className="text-2xl">
-                  Asegura tu lanzamiento haciendo que tu profesional cumpla con todo lo necesario para un lanzamiento 100% exitoso, evitando dolores de cabeza y errores.
+                  Asegura tu lanzamiento haciendo que tu profesional cumpla con todo lo necesario para un lanzamiento 100% exitoso.
                 </p>
               </div>
             </div>
@@ -325,91 +283,86 @@ export default function WorkshopLanding() {
               <img 
                 src="/discord.png"
                 alt="Comunidad de acompañamiento"
-                className="w-48 md:w-64 lg:w-80 object-contain"
+                className="w-full max-w-xs sm:max-w-sm h-auto object-contain"
               />
               <div className="text-left text-black tracking-wider">
                 <h4 className="text-xl md:text-3xl font-bold mb-2">
                   COMUNIDAD DE ACOMPAÑAMIENTO – SU VALOR ES INVALUABLE
                 </h4>
                 <p className="text-2xl">
-                  Aprovecha la experiencia de nuestra comunidad para conocer a otros profesionales y potenciar tu negocio.
+                  Aprovecha la experiencia de nuestra comunidad para potenciar tu negocio.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* BONUS */}
-        <div className="flex justify-center items-center relative w-full">
-          <div
-            className="relative flex flex-col justify-center items-center rounded-xl text-white text-center w-full max-w-lg md:max-w-2xl lg:max-w-4xl px-4 py-12"
-            style={{
-              backgroundImage: "url('/fondobonus.png')",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              minHeight: "1000px",
-              width: "80%",
-              maxWidth: "900px",
-            }}
-          >
-            {/* Título */}
-            <div className="bg-[#f9bc66]/80 w-3/4 pb-2 md:w-1/2 rounded-3xl mt-20 md:p-5">
-              <h1 className="text-2xl md:text-4xl font-bold p-3 tracking-wider">
-                BONUS TEMPORALES
-              </h1>
-              <p className="md:text-lg md:tracking-wider">
-                Acelera tus resultados comprando dentro de la primera hora con estos bonus GRATIS
-              </p>
-            </div>
+   {/* BONUS */}
+<div className="flex justify-center items-center relative w-full px-4">
+  <div
+    className="relative flex flex-col justify-center items-center text-white text-center w-full md:max-w-2xl lg:max-w-4xl px-4 py-12"
+    style={{
+      backgroundImage: "url('/fondobonus.png')",
+      backgroundSize: "cover", // Cambia a "contain" si prefieres que se vea la imagen completa
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      minHeight: "1000px",
+    }}
+  >
+    <div className="bg-[#f9bc66]/80 w-11/12 md:w-1/2 p-2 rounded-3xl mt-5 md:p-5">
+      <h1 className="text-2xl md:text-4xl font-bold p-3 tracking-wider">
+        BONUS TEMPORALES
+      </h1>
+      <p className="md:text-lg font-bold md:tracking-wider">
+        Acelera tus resultados comprando dentro de la primera hora con estos bonus GRATIS
+      </p>
+    </div>
 
-            {/* Tarjetas de Bonus */}
-            <div className="flex flex-col justify-center items-center mt-6 gap-4">
-              <img src="/bonus1.png" alt="Bonus 1" className="w-full max-w-xs" />
-              <img src="/bonus2.png" alt="Bonus 2" className="w-full max-w-xs" />
-            </div>
+    <div className="flex flex-col justify-center items-center mt-6 gap-4">
+      <img src="/bonus1.png" alt="Bonus 1" className="w-full max-w-xs" />
+      <img src="/bonus2.png" alt="Bonus 2" className="w-full max-w-xs" />
+    </div>
 
-            {/* Contador */}
-            <div className="flex justify-center items-center gap-4 flex-wrap mt-6">
-              {[
-                { label: "Horas", value: hours },
-                { label: "Minutos", value: minutes },
-                { label: "Segundos", value: seconds },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-[#013557] text-white p-4 rounded-lg text-center min-w-[80px] max-w-[100px] shadow-md"
-                >
-                  <span className="block text-2xl font-bold">{item.value}</span>
-                  <p className="text-sm">{item.label}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* Botón de Compra */}
-            <button
-              onClick={() =>
-                window.open(
-                  "https://pay.hotmart.com/O94296249S?checkoutMode=10&bid=1725551295569",
-                  "_blank"
-                )
-              }
-              className="mt-5 bg-gradient-to-r from-black via-[#013557] to-black text-white text-xl md:text-2xl font-medium py-4 px-8 rounded-lg w-full max-w-2xl mx-auto block mb-1 animate-bounce"
-              style={{ backgroundSize: "200%", backgroundPosition: "center" }}
-            >
-              ¡Quiero también el bonus!
-            </button>
-          </div>
+    <div className="flex justify-center items-center gap-4 flex-wrap mt-6">
+      {[
+        { label: "Horas", value: hours },
+        { label: "Minutos", value: minutes },
+        { label: "Segundos", value: seconds },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="bg-[#013557] text-white p-4 rounded-lg text-center min-w-[80px] max-w-[100px] shadow-md"
+        >
+          <span className="block text-2xl font-bold">{item.value}</span>
+          <p className="text-sm">{item.label}</p>
         </div>
+      ))}
+    </div>
+
+    <button
+      onClick={() =>
+        window.open(
+          "https://pay.hotmart.com/O94296249S?checkoutMode=10&bid=1725551295569",
+          "_blank"
+        )
+      }
+      className="mt-5 bg-gradient-to-r from-black via-[#013557] to-black text-white text-xl md:text-2xl font-medium py-4 px-8 rounded-lg w-11/12 md:w-3/4 max-w-2xl mx-auto block mb-1 animate-bounce"
+      style={{ backgroundSize: "200%", backgroundPosition: "center" }}
+    >
+      ¡Quiero también el bonus!
+    </button>
+  </div>
+</div>
+
+
 
         {/* FINAL */}
-        <div className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 md:w-full mx-5 shadow-lg mt-7">
-          <div className="rounded-xl p-6 md:p-8 max-w-2xl mx-auto text-center md:text-left">
+        <div className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 w-full mx-5 shadow-lg mt-1">          <div className="rounded-xl p-6 md:p-8 max-w-2xl mx-auto text-center md:text-left">
             <h1 className="text-black text-3xl font-bold">Entonces, esto es lo que obtendrás</h1>
             <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-10 text-[#f9bc66] border-b-4 border-[#f9bc66] animate-typing">
               POR LOS PRÓXIMOS 60 MINUTOS:
             </h2>
-            <img src="/mockup.png" alt="Image Mockup" className="mb-5 w-full h-auto rounded-lg shadow-md" />
+            <img src="/mockup.png" alt="Mockup" className="mb-5 w-full h-auto rounded-lg shadow-md" />
             <div className="space-y-4 text-base md:text-lg">
               {[
                 { name: "SISTEMA DE LANZAMIENTO GO PITCHERING", value: "$997 usd" },
@@ -420,7 +373,7 @@ export default function WorkshopLanding() {
                 { name: "COPYS MAGNETICOS", value: "$1500 usd" },
               ].map((item, index) => (
                 <div key={index} className="flex flex-wrap justify-between items-center text-center md:text-left">
-                  <span className="text-[#f9bc66] font-semibold flex-1 text-start md:text-left">
+                  <span className="text-[#f9bc66] font-semibold flex-1 text-start">
                     {item.name}
                   </span>
                   <span className="text-red-600 font-bold text-end">
@@ -453,6 +406,9 @@ export default function WorkshopLanding() {
               </button>
             </div>
           </div>
+
+
+          
           {/* FOOTER */}
           <footer className="mt-1 text-center text-sm text-gray-500 p-4">
             <p className="mb-2">© 2025 Go Pitchering. All Rights Reserved.</p>
@@ -460,8 +416,9 @@ export default function WorkshopLanding() {
               Descargo de Responsabilidad: Este producto no garantiza la obtención de resultados. Las referencias al desarrollo de una determinada estrategia no deben ser interpretadas como una garantía de resultados. Esta página no es parte de la página de Meta o de Meta, Inc.
             </p>
           </footer>
+
+
         </div>
-      </section>
     </div>
   );
 }
