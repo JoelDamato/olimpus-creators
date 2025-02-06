@@ -205,102 +205,108 @@ export default function WorkshopLanding() {
 
         {/* BULLETS POINTS */}
         <div className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 mx-5 shadow-lg mt-7">
-        <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-8 text-[#f9bc66] border-b-4 border-[#f9bc66] whitespace-normal md:whitespace-nowrap animate-typing">
-  Ahora... Conoce qué obtendrás dentro:
-</h2>
+  <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-8 text-[#f9bc66] border-b-4 border-[#f9bc66] whitespace-normal md:whitespace-nowrap animate-typing">
+    Ahora... Conoce qué obtendrás dentro:
+  </h2>
 
-          <div className="flex flex-col gap-5 p-5 justify-center items-center mb-5">
-            {/* Bloque 1 */}
-            <div className="flex flex-col md:flex-row gap-5 items-center">
-              <img 
-                src="/bullet1.png"
-                alt="Guía de lanzamiento"
-                className="w-full max-w-xs sm:max-w-sm h-[13rem] object-contain"
-              />
-              <div className="text-left text-black tracking-wider">
-                <h4 className="text-xl md:text-3xl font-bold mb-2">
-                  GUÍA DE LANZAMIENTO PREDECIBLE EN 7 DÍAS – Valorada en $970 USD
-                </h4>
-                <p className="text-2xl">
-                  Aprende a crear lanzamientos predecibles en menos de 7 días con el método Go Pitchering.
-                </p>
-              </div>
-            </div>
+  <div className="flex flex-col gap-5 p-5 justify-center items-center mb-5">
+    {/* Bloque 1 */}
+    <div className="flex flex-col md:flex-row gap-5 items-center">
+      <img 
+        src="/bullet1.png"
+        alt="Guía de lanzamiento"
+        className="w-full max-w-xs sm:max-w-sm h-auto md:h-[13rem] object-contain"
+        loading="lazy"
+      />
+      <div className="text-left text-black tracking-wider">
+        <h4 className="text-xl md:text-3xl font-bold mb-2">
+          GUÍA DE LANZAMIENTO PREDECIBLE EN 7 DÍAS – Valorada en $970 USD
+        </h4>
+        <p className="text-2xl">
+          Aprende a crear lanzamientos predecibles en menos de 7 días con el método Go Pitchering.
+        </p>
+      </div>
+    </div>
 
-            {/* Bloque 2 */}
-            <div className="flex flex-col md:flex-row gap-5 items-center">
-              <img 
-                src="/bullet2.png"
-                alt="Crea cursos rentables"
-                className="w-full max-w-xs sm:max-w-sm h-[13rem] object-contain"
-              />
-              <div className="text-left text-black tracking-wider">
-                <h4 className="text-xl md:text-3xl font-bold mb-2">
-                  CREA CURSOS RENTABLES SIN EXPERIENCIA – Valorada en $197 USD
-                </h4>
-                <p className="text-2xl">
-                  Descubre las necesidades de tu audiencia y crea el curso perfecto para vender de forma rápida y sencilla.
-                </p>
-              </div>
-            </div>
+    {/* Bloque 2 */}
+    <div className="flex flex-col md:flex-row gap-5 items-center">
+      <img 
+        src="/bullet2.png"
+        alt="Crea cursos rentables"
+        className="w-full max-w-xs sm:max-w-sm h-auto md:h-[13rem] object-contain"
+        loading="lazy"
+      />
+      <div className="text-left text-black tracking-wider">
+        <h4 className="text-xl md:text-3xl font-bold mb-2">
+          CREA CURSOS RENTABLES SIN EXPERIENCIA – Valorada en $197 USD
+        </h4>
+        <p className="text-2xl">
+          Descubre las necesidades de tu audiencia y crea el curso perfecto para vender de forma rápida y sencilla.
+        </p>
+      </div>
+    </div>
 
-            {/* Bloque 3 */}
-            <div className="flex flex-col md:flex-row gap-5 items-center">
-              <img 
-                src="/bullet3.png"
-                alt="Prospecta tu primer influencer"
-                className="w-full max-w-xs sm:max-w-sm h-[13rem] object-contain"
-              />
-              <div className="text-left text-black tracking-wider">
-                <h4 className="text-xl md:text-3xl font-bold mb-2">
-                  PROSPECTA TU PRIMER INFLUENCER ASEGURADO – VALOR INVALUABLE
-                </h4>
-                <p className="text-2xl">
-                  Con el estudio de mercado, descubre los problemas de tu audiencia y prospecta de forma segura a tu primer influencer.
-                </p>
-              </div>
-            </div>
+    {/* Bloque 3 */}
+    <div className="flex flex-col md:flex-row gap-5 items-center">
+      <img 
+        src="/bullet3.png"
+        alt="Prospecta tu primer influencer"
+        className="w-full max-w-xs sm:max-w-sm h-auto md:h-[13rem] object-contain"
+        loading="lazy"
+      />
+      <div className="text-left text-black tracking-wider">
+        <h4 className="text-xl md:text-3xl font-bold mb-2">
+          PROSPECTA TU PRIMER INFLUENCER ASEGURADO – VALOR INVALUABLE
+        </h4>
+        <p className="text-2xl">
+          Con el estudio de mercado, descubre los problemas de tu audiencia y prospecta de forma segura a tu primer influencer.
+        </p>
+      </div>
+    </div>
 
-            {/* Bloque 4 */}
-            <div className="flex flex-col md:flex-row gap-5 items-center">
-              <img 
-                src="/bullet4.png"
-                alt="Contrato asegurador de lanzamiento"
-                className="w-full max-w-xs sm:max-w-sm h-[13rem] object-contain"
-              />
-              <div className="text-left text-black tracking-wider">
-                <h4 className="text-xl md:text-3xl font-bold mb-2">
-                  CONTRATO ASEGURADOR DE LANZAMIENTO – Valorado en $1500 USD
-                </h4>
-                <p className="text-2xl">
-                  Asegura tu lanzamiento haciendo que tu profesional cumpla con todo lo necesario para un lanzamiento 100% exitoso.
-                </p>
-              </div>
-            </div>
+    {/* Bloque 4 */}
+    <div className="flex flex-col md:flex-row gap-5 items-center">
+      <img 
+        src="/bullet4.png"
+        alt="Contrato asegurador de lanzamiento"
+        className="w-full max-w-xs sm:max-w-sm h-auto md:h-[13rem] object-contain"
+        loading="lazy"
+      />
+      <div className="text-left text-black tracking-wider">
+        <h4 className="text-xl md:text-3xl font-bold mb-2">
+          CONTRATO ASEGURADOR DE LANZAMIENTO – Valorado en $1500 USD
+        </h4>
+        <p className="text-2xl">
+          Asegura tu lanzamiento haciendo que tu profesional cumpla con todo lo necesario para un lanzamiento 100% exitoso.
+        </p>
+      </div>
+    </div>
 
-            {/* Bloque 5 */}
-            <div className="flex flex-col md:flex-row gap-5 items-center">
-              <img 
-                src="/discord.png"
-                alt="Comunidad de acompañamiento"
-                className="w-full max-w-xs sm:max-w-sm h-auto object-contain"
-              />
-              <div className="text-left text-black tracking-wider">
-                <h4 className="text-xl md:text-3xl font-bold mb-2">
-                  COMUNIDAD DE ACOMPAÑAMIENTO – SU VALOR ES INVALUABLE
-                </h4>
-                <p className="text-2xl">
-                  Aprovecha la experiencia de nuestra comunidad para potenciar tu negocio.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    {/* Bloque 5 */}
+    <div className="flex flex-col md:flex-row gap-5 items-center">
+      <img 
+        src="/discord.png"
+        alt="Comunidad de acompañamiento"
+        className="w-3/4 max-w-xs sm:max-w-sm h-auto md:h-[13rem] object-contain"
+        loading="lazy"
+      />
+      <div className="text-left text-black tracking-wider">
+        <h4 className="text-xl md:text-3xl font-bold mb-2">
+          COMUNIDAD DE ACOMPAÑAMIENTO – SU VALOR ES INVALUABLE
+        </h4>
+        <p className="text-2xl">
+          Aprovecha la experiencia de nuestra comunidad para potenciar tu negocio.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
    {/* BONUS */}
 <div className="flex justify-center items-center relative w-full px-4">
   <div
-    className="relative flex flex-col justify-center items-center text-white text-center w-full md:max-w-2xl lg:max-w-4xl px-4 py-12"
+    className="relative flex flex-col justify-center items-center text-white text-center w-full md:max-w-2xl lg:max-w-4xl "
     style={{
       backgroundImage: "url('/fondobonus.png')",
       backgroundSize: "cover", // Cambia a "contain" si prefieres que se vea la imagen completa
@@ -319,8 +325,8 @@ export default function WorkshopLanding() {
     </div>
 
     <div className="flex flex-col justify-center items-center mt-6 gap-4">
-      <img src="/bonus1.png" alt="Bonus 1" className="w-full max-w-xs" />
-      <img src="/bonus2.png" alt="Bonus 2" className="w-full max-w-xs" />
+      <img src="/copy1.png" alt="Bonus 1" className="w-full" />
+      <img src="/copy2.png" alt="Bonus 2" className="w-full" />
     </div>
 
     <div className="flex justify-center items-center gap-4 flex-wrap mt-6">
