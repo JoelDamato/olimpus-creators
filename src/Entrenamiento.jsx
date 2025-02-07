@@ -112,7 +112,7 @@ export default function WorkshopLanding() {
                       <div className="flex flex-col gap-3">
                         {/* Bloque 1 */}
                         <div className="flex">
-                          <img src="/flecha1.png" alt="" className='w-8 absolute left-5 mt-10' />
+                          <img src="/flecha1.png" alt="" className='w-8 absolute left-9 mt-10' />
                           <p className="text-lg md:text-2xl  font-bold flex-grow ">
                             Dejar de depender de modelos de negocios saturados o que no son aplicables para vos...
                           
@@ -124,11 +124,11 @@ export default function WorkshopLanding() {
                           <p className="text-lg md:text-2xl font-bold flex-grow ">
                             Comenzar tu negocio digital en los próximos 30 días sin margen de error sin dejar de hacer lo que estás haciendo hoy en día.
                           </p>
-                            <img src="/flecha2.png" alt="" className='w-8 absolute right-5 mt-20' />
+                            <img src="/flecha2.png" alt="" className='w-8 absolute right-8 mt-20' />
                         </div>
                         {/* Bloque 3 */}
                         <div className="flex md:flex-row items-center justify-between md:mt-8">
-                          <img src="/flecha1.png" alt="" className='w-8 absolute left-5 mt-20' />
+                          <img src="/flecha1.png" alt="" className='w-8 absolute left-9 mt-20' />
                           <p className="text-lg  md:text-2xl font-bold flex-grow ">
                             No necesitas salir a prospectar todos los días, ya que con un solo influencer basta.
                           </p>
@@ -138,7 +138,7 @@ export default function WorkshopLanding() {
                           <p className="text-lg font-bold flex-grow ">
                             Esto NO es OTRO modelo de negocios más como te presentan los demás allá afuera.
                           </p>
-                          <img src="/flecha2.png" alt="" className='w-8 absolute right-5 mt-20' />
+                          <img src="/flecha2.png" alt="" className='w-8 absolute right-8 mt-20' />
                         </div>
                         {/* Bloque 5 */}
                         <div className="flex items-center justify-between">
@@ -161,19 +161,20 @@ export default function WorkshopLanding() {
           <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-1 mt-2">
             Conoce como otras personas como vos...
           </h2>
-          <div className="flex flex-col gap-8">
-            <div className="flex flex-col md:flex-row items-center text-left p-4">
+          <div className="flex flex-col">
+            <div className="flex flex-col md:flex-row items-center text-left ">
               <img src="/discord.png" alt="Discord" className="w-[150px] md:w-80 mx-auto" />
               <div className="mt-4 md:mt-8">
-                <p className="text-2xl mb-8">
+                <p className="text-2xl ">
                   Están consiguiendo muy rápido sus influencers gracias a nuestra comunidad de Pitcher Partner
                 </p>
-                <div className="flex gap-5 items-end mt-5 justify-center">
-                  <img src="/blanca1.png" alt="Blanca1" className="w-10" />
-                  <p className="text-sm font-semibold">
+
+                <div className="flex justify-center items-center ml-1 mb-5 ">
+                  <img src="/blanca1.png" alt="Blanca1" className="w-10 h-10" />
+                  <p className="text-sm font-semibold ml-4 mt-2">
                     Alexis consiguió 3 en una semana sin tener seguidores ni experiencia previa
                   </p>
-                  <img src="/trofeo.png" alt="Trofeo" className="w-14 md:w-[10rem] rounded-md  mx-auto" />
+                  <img src="/trofeo.png" alt="Trofeo" className="w-10 md:w-[10rem] " />
                 </div>
               </div>
             </div>
@@ -181,7 +182,7 @@ export default function WorkshopLanding() {
             <div className="flex flex-col md:flex-row">
               
               <div className="mx-auto">
-                <img src="/ref.png" alt="Referencia 1" className="w-full max-w-sm md:ml-5" />
+                <img src="/ref.png" alt="Referencia 1" className="w-full mb-5 max-w-sm md:ml-5" />
               </div>
             </div>
 
@@ -282,12 +283,13 @@ export default function WorkshopLanding() {
 
     {/* Bloque 4 */}
   <div className="flex  md:flex-row gap-5 items-center">
-      <img 
-        src="/bullet4.png"
-        alt="Contrato asegurador de lanzamiento"
-      className="w-[30%] md:w-full max-w-xs sm:max-w-sm h-auto md:h-[13rem] object-contain"
-         loading="lazy"
-      />
+  <img 
+  src="/bullet4.png"
+  alt="Contrato asegurador de lanzamiento"
+  className="max-w-[30%] h-[7.5rem] md:max-w-full sm:max-w-sm h-auto md:h-[13rem] object-cover"
+  loading="lazy"
+/>
+
       <div className="text-left text-black tracking-wider">
         <h4 className="text-sm md:text-3xl font-bold mb-2">
           CONTRATO ASEGURADOR DE LANZAMIENTO – Valorado en $1500 USD
@@ -303,7 +305,7 @@ export default function WorkshopLanding() {
       <img 
         src="/discord.png"
         alt="Comunidad de acompañamiento"
-         className="w-[30%] md:w-full max-w-xs sm:max-w-sm h-auto md:h-[13rem] object-contain"
+         className="w-[30%] h-[8rem] p-2 md:w-full max-w-xs sm:max-w-sm h-auto md:h-[13rem] object-contain"
         loading="lazy"
       />
       <div className="text-left text-black tracking-wider">
@@ -320,7 +322,7 @@ export default function WorkshopLanding() {
         {/*FIN BULLETS POINTS */}
 
           {/* BONUS */}
-        <div className="flex justify-center items-center relative w-[100%]">
+        <div className="flex justify-center items-center relative w-[100%] mt-2">
           <div
             className="relative flex flex-col justify-center items-center text-white text-center w-[100%] w-full md:max-w-2xl lg:max-w-4xl "
             style={{
@@ -328,7 +330,7 @@ export default function WorkshopLanding() {
               backgroundSize: "cover", // Cambia a "contain" si prefieres que se vea la imagen completa
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
-              minHeight: "1000px",
+              minHeight: "700px",
             }}
           >
             <div className="bg-[#f9bc66]/80 w-11/12 md:w-1/2 p-2 rounded-3xl mt-5 md:p-5">
