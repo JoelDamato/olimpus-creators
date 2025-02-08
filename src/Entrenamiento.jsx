@@ -158,64 +158,58 @@ export default function WorkshopLanding() {
         {/* REFERENCIAS */}
       <section className="w-full text-white text-center">
    
-          <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-1 mt-2">
+          <h2 className="text-2xl px-20 py-5 sm:text-5xl md:text-7xl font-bold">
             Conoce como otras personas como vos...
           </h2>
-          <div className="flex flex-col">
-            <div className="flex flex-col md:flex-row items-center text-left ">
-              <img src="/discord.png" alt="Discord" className="w-[150px] md:w-80 mx-auto" />
-              <div className="mt-4 md:mt-8">
-                <p className="text-2xl ">
+          <img src="/discord.png" alt="Discord" className="w-[150px] mb-2 md:w-80 mx-auto" />
+          <p className="text-center text-sm px-5 ">
                   Están consiguiendo muy rápido sus influencers gracias a nuestra comunidad de Pitcher Partner
                 </p>
+          
+          <div className="flex flex-col">
 
-                <div className="flex justify-center items-center ml-1 mb-5 ">
-                  <img src="/blanca1.png" alt="Blanca1" className="w-10 h-10" />
-                  <p className="text-sm font-semibold ml-4 mt-2">
+
+           <div className="flex justify-center  ml-1 mb-5 ">
+             <div className='flex flex-col'>
+                <div className='flex items-center'>
+                  <img src="/blanco1.png" alt="Blanca1" className="w-14" />
+                  <p className="text-sm font-semibold ml-4">
                     Alexis consiguió 3 en una semana sin tener seguidores ni experiencia previa
                   </p>
-                  <img src="/trofeo.png" alt="Trofeo" className="w-10 md:w-[10rem] " />
+                  <img src="/trofeo.png" alt="Trofeo" className="w-12 mr-5 md:w-[10rem] " />
                 </div>
+                  <img src="/ref.png" alt="Referencia 1" className="w-full px-4 " />
               </div>
-            </div>
+           </div>
 
-            <div className="flex flex-col md:flex-row">
-              
-              <div className="mx-auto">
-                <img src="/ref.png" alt="Referencia 1" className="w-full mb-5 max-w-sm md:ml-5" />
-              </div>
-            </div>
 
-            <div className="flex items-center md:flex-row rounded-lg">
-              <img src="/trofeo.png" alt="Trofeo" className="w-14 md:w-[10rem] rounded-md " />
-              <p className="text-sm font-semibold text-center md:text-left">
-                    Paula cerró su primer influencer de 69K en 9 días sin usar Instagram
+           <div className="flex justify-center  ml-1 mb-5 ">
+             <div className='flex flex-col'>
+                <div className='flex items-center'>
+                <img src="/trofeo.png" alt="Trofeo" className="w-12 mr-3 md:w-[10rem] " />
+
+                  <p className="text-sm font-semibold ">
+                  Paula cerró su primer influencer de 69K en 9 días sin usar Instagram
                   </p>
-              
-              <div className="flex flex-col items-center mx-auto">
-                <div className="flex flex-col md:flex-row items-center">
+                  <img src="/blanco2.png" alt="Blanca1" className="w-12" />
 
-                  <img src="/flecha3.png" alt="Flecha" className="w-20 ml-2 mt-2" />
                 </div>
-              
+                <img src="/ref3.png" alt="Referencia 3" className="w-full px-4" />
               </div>
-            </div>
+           </div>
 
-            <img src="/ref3.png" alt="Referencia 3" className="w-full max-w-sm" />
 
-            <div className="flex flex-col md:flex-row rounded-lg ">
+            <div className="flex  md:flex-row rounded-lg ">
 
-              
-              <div className="flex flex-col items-center mx-auto">
-                <div className="flex items-center md:items-end justify-center">
-                  <img src="/ref2.png" alt="Referencia 2" className="w-2/3 max-w-sm" />
-                  <img src="/trofeo.png" alt="Trofeo" className="w-10 ml-8 absolute right-19 mt-12 md:w-[10rem] rounded-md mb-4 mx-auto" />
-                  <p>Laura cerro su primer influencer sin conocimiento y ya hizo +3100 USD</p>
+            <img src="/blanco1.png" alt="Blanca1" className="w-14 absolute mt-[-17px]" />
+            <img src="/ref2.png" alt="Referencia 2" className="ml-9 w-2/3 max-w-sm" />
+            <img src="/trofeo.png" alt="Trofeo" className="w-10 ml-8 absolute right-6 mt-20 md:w-[10rem] rounded-md mb-3 mx-auto" />
+            <p className='text-xs'>Laura cerro su primer influencer sin conocimiento y ya hizo +3100 USD</p>
                 </div>
-                
-              </div>
-            </div>
+
+
           </div>
+                
 
         </section>
         {/* FIN REFERENCIAS */}
