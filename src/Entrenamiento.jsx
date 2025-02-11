@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 export default function WorkshopLanding() {
+  const [isVisible, setIsVisible] = useState(false);
   const [timeLeft, setTimeLeft] = useState(3600000); // 1 hora en milisegundos
   const [showExtraContent, setShowExtraContent] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -37,6 +39,23 @@ export default function WorkshopLanding() {
     return () => clearInterval(interval);
   }, []);
 
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const triggerPoint = document.getElementById("hide-section");
+      const triggerOffset = triggerPoint ? triggerPoint.offsetTop : Infinity;
+      
+      if (window.scrollY > window.innerHeight && window.scrollY < triggerOffset) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const formatTime = (time) => {
     const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
@@ -51,6 +70,51 @@ export default function WorkshopLanding() {
   const { hours, minutes, seconds } = formatTime(timeLeft);
 
   return (
+
+    <>
+    {isModalOpen && (
+   <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[100000]">
+   <div className="bg-white p-6 rounded-lg shadow-lg max-w-[90%] w-full text-center">
+   <button 
+  className="flex justify-start ml-auto text-4xl font-bold text-red-600"
+  onClick={() => setIsModalOpen(false)}
+>
+  ×
+</button>
+
+      <img src="/mockup.png" alt="Imagen Modal" className="w-full mb-4 rounded" />
+      <div className="flex flex-col mt-4">
+        <h1 className='text-2xl font-bold'>Seleccione su pais:</h1>
+        <p className='mb-2'>Tienes una garantia de 7 dias</p>
+        <a 
+          href="https://mpago.li/2GbVtVe" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="bg-gradient-to-r from-black via-[#013557] mb-3 rounded-full text-2xl to-black text-white px-4 py-2"
+        >
+         🇦🇷 Soy de Argentina
+        </a>
+        <a 
+          href="https://pay.hotmart.com/O94296249S?off=jhyjalcn&checkoutMode=10" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="bg-gradient-to-r from-black via-[#013557] mb-3 rounded-full text-2xl to-black text-white px-4 py-2"
+        >
+         🇦🇷 Soy de Otros Pais
+        </a>
+       <a 
+        href="https://api.whatsapp.com/send?phone=+5493516361259&text=Hola,%20quiero%20inscribirme%20a%20Go%20Pitchering%20v%C3%ADa%20Crypto,%20gracias" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+      >
+         Si queres pagar con crypto, Click aquí
+      </a>
+      </div>
+    </div>
+  </div>
+)}
+
+
     <div
       className="min-h-screen flex flex-col items-center justify-center overflow-x-hidden"
       style={{
@@ -80,7 +144,7 @@ export default function WorkshopLanding() {
           <div className="text-center flex justify-center items-center w-full mb-5 overflow-hidden bg-black">
             <iframe
               ref={videoRef}
-              src="https://player-vz-7cd4a4ef-9e2.tv.pandavideo.com/embed/?v=a77aa388-c94a-4f56-aad1-c3c67de4a6a1"
+              src="https://player-vz-7cd4a4ef-9e2.tv.pandavideo.com/embed/?v=4e5e8782-e596-4b94-aae5-1b769edb4533"
               style={{ border: "none", width: "100%", height: "100%" }}
               allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
               className="aspect-video w-full"
@@ -94,7 +158,9 @@ export default function WorkshopLanding() {
 
                   
                   <section className="w-full max-w-4xl px-4 mt-2 bg-white">
-                    <h1 className="bg-gradient-to-r from-black via-[#013557] to-black text-white font-bold text-center text-3xl md:text-2xl py-4 px-8 rounded-lg w-full max-w-2xl mx-auto block mb-16 transition-all duration-300">
+                    <h1
+                          onClick={() => setIsModalOpen(true)}
+                    className="bg-gradient-to-r from-black via-[#013557] to-black text-white font-bold text-center text-3xl md:text-2xl py-4 px-8 rounded-lg w-full max-w-2xl mx-auto block mb-16 transition-all duration-300">
                       Aprende a ser un PITCHER PARTNER
                     </h1>
 
@@ -148,6 +214,29 @@ export default function WorkshopLanding() {
                         </div>
                       </div>
                     </div>
+
+                    <div className={` z-[99999] pointer-events-auto fixed bottom-0 left-1/2 transform -translate-x-1/2 bg-black text-white p-4 shadow-lg w-full max-w-md text-center ${isVisible ? 'block' : 'hidden'}`}>
+      <p className="text-lg pb-1">Tenes una garantia de 7 dias</p>
+      <button 
+      onClick={() => setIsModalOpen(true)}
+        className="flex justify-center items-center  gap-2 bg-gradient-to-r from-black via-[#013557] to-black text-white text-xl md:text-2xl font-medium py-4 px-8 rounded-lg w-full transition-all duration-300 hover:scale-105" 
+      >
+        Accede al curso ahora
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+</svg>
+
+      </button>
+      <p className="text-sm pt-1 pb-1">Si queres pagar con crypto, <a 
+        href="https://api.whatsapp.com/send?phone=+5493516361259&text=Hola,%20quiero%20inscribirme%20a%20Go%20Pitchering%20v%C3%ADa%20Crypto,%20gracias" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+      >
+        Click aquí
+      </a></p>
+      <p className="text-sm">Si la formacion no es lo que esperabas, te rembolsamos el 100% de tu dinero, sin preguntas.</p>
+    </div>
                   </section>
 
                 </div>
@@ -201,9 +290,9 @@ export default function WorkshopLanding() {
 
             <div className="flex  md:flex-row rounded-lg ">
 
-            <img src="/blanco1.png" alt="Blanca1" className="w-14 absolute mt-[-17px]" />
-            <img src="/ref2.png" alt="Referencia 2" className="ml-9 w-2/3 max-w-sm" />
-            <img src="/trofeo.png" alt="Trofeo" className="w-10 ml-8 absolute right-6 mt-20 md:w-[10rem] rounded-md mb-3 mx-auto" />
+            <img src="/blanco1.png" alt="Blanca1" className="w-14 absolute mt-[-17px] z-10000" />
+            <img src="/ref2.png" alt="Referencia 2" className="ml-9 w-2/3 max-w-sm z-100" />
+            <img src="/trofeo.png" alt="Trofeo" className="w-10 z-100000 ml-8 absolute right-6 mt-20 md:w-[10rem] rounded-md mb-3 mx-auto" />
             <p className='text-xs'>Laura cerro su primer influencer sin conocimiento y ya hizo +3100 USD</p>
                 </div>
 
@@ -215,7 +304,7 @@ export default function WorkshopLanding() {
         {/* FIN REFERENCIAS */}
 
         {/* BULLETS POINTS */}
-        <div className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 mx-5 shadow-lg mt-7">
+        <div  className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 mx-5 shadow-lg mt-7">
   <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-8 text-[#f9bc66] border-b-4 border-[#f9bc66] whitespace-normal md:whitespace-nowrap animate-typing">
     Ahora... Conoce qué obtendrás dentro:
   </h2>
@@ -276,7 +365,7 @@ export default function WorkshopLanding() {
     </div>
 
     {/* Bloque 4 */}
-  <div className="flex  md:flex-row gap-5 items-center">
+  <div id="hide-section" className="flex  md:flex-row gap-5 items-center">
   <img 
   src="/bullet4.png"
   alt="Contrato asegurador de lanzamiento"
@@ -295,7 +384,7 @@ export default function WorkshopLanding() {
     </div>
 
     {/* Bloque 5 */}
-  <div className="flex  md:flex-row gap-5 items-center">
+  <div  className="flex  md:flex-row gap-5 items-center">
       <img 
         src="/discord.png"
         alt="Comunidad de acompañamiento"
@@ -316,7 +405,7 @@ export default function WorkshopLanding() {
         {/*FIN BULLETS POINTS */}
 
           {/* BONUS */}
-        <div className="flex justify-center items-center relative w-[100%] mt-2">
+        <div  className="flex justify-center items-center relative w-[100%] mt-4 mb-2">
           <div
             className="relative flex flex-col justify-center items-center text-white text-center w-[100%] w-full md:max-w-2xl lg:max-w-4xl "
             style={{
@@ -358,12 +447,7 @@ export default function WorkshopLanding() {
             </div>
 
             <button
-              onClick={() =>
-                window.open(
-                  "https://pay.hotmart.com/O94296249S?checkoutMode=10&bid=1725551295569",
-                  "_blank"
-                )
-              }
+              onClick={() => setIsModalOpen(true)}
               className="mt-5 bg-gradient-to-r from-black via-[#013557] to-black text-white text-xl md:text-2xl font-medium py-4 px-8 rounded-lg w-11/12 md:w-3/4 max-w-2xl mx-auto block mb-1 animate-bounce"
               style={{ backgroundSize: "200%", backgroundPosition: "center" }}
             >
@@ -408,20 +492,16 @@ export default function WorkshopLanding() {
               </h3>
               <h3 className="text-sm py-1 rounded-lg text-center">
                 <strong>
-                  <span className="text-red-600 text-3xl font-bold">SOLO POR HOY: $97 USD</span>
+                  <span className="text-green-600 text-3xl font-bold">SOLO POR HOY: $97 USD</span>
                 </strong>
               </h3>
               <button
-                onClick={() =>
-                  window.open(
-                    "https://pay.hotmart.com/O94296249S?checkoutMode=10&bid=1725551295569",
-                    "_blank"
-                  )
-                }
+                 onClick={() => setIsModalOpen(true)}
                 className="bg-gradient-to-r from-black via-[#013557] to-black text-white text-xl md:text-2xl font-medium py-4 px-8 rounded-lg w-full max-w-md mt-5 transition-all duration-300 hover:scale-105"
               >
                 ¡Quiero también el bonus!
               </button>
+              <img src="/GARANTIA.png" className='mt-3' alt="" />
             </div>
           </div>
 
@@ -440,5 +520,6 @@ export default function WorkshopLanding() {
         {/*FIN FINAL */}
 
     </div>
+    </>
   );
 }
