@@ -6,6 +6,27 @@ export default function WorkshopLanding() {
   const [showExtraContent, setShowExtraContent] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const videoRef = useRef(null);
+  const lastSectionRef = useRef(null);
+const [isVisibleWhat, setIsVisibleWhat] = useState(false);
+    const containerRef = useRef(null);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        if (containerRef.current) {
+          const { top, bottom } = containerRef.current.getBoundingClientRect();
+          const isInside = top < window.innerHeight && bottom > 0;
+          setIsVisibleWhat(isInside);
+        }
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+  
+    const handleScroll = () => {
+      lastSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
 
   useEffect(() => {
     // Escuchar mensajes del iframe
@@ -85,7 +106,7 @@ export default function WorkshopLanding() {
       <img src="/mockup.png" alt="Imagen Modal" className="w-full mb-4 rounded" />
       <div className="flex flex-col mt-4">
         <h1 className='text-2xl font-bold'>Seleccione su pais:</h1>
-        <p className='mb-2'>Tienes una garantia de 7 dias</p>
+        <p className='mb-2'>🔒 Tienes una garantia de 7 dias de devolucion</p>
         <a 
           href="https://mpago.li/2GbVtVe" 
           target="_blank" 
@@ -100,10 +121,11 @@ export default function WorkshopLanding() {
           rel="noopener noreferrer" 
           className="bg-gradient-to-r from-black via-[#013557] mb-3 rounded-full text-2xl to-black text-white px-4 py-2"
         >
-         🇦🇷 Soy de Otros Pais
+         🌍 Soy de Otros Pais
         </a>
        <a 
         href="https://api.whatsapp.com/send?phone=+5493516361259&text=Hola,%20quiero%20inscribirme%20a%20Go%20Pitchering%20v%C3%ADa%20Crypto,%20gracias" 
+        className='underline'
         target="_blank" 
         rel="noopener noreferrer" 
       >
@@ -158,11 +180,14 @@ export default function WorkshopLanding() {
 
                   
                   <section className="w-full max-w-4xl px-4 mt-2 bg-white">
-                    <h1
-                          onClick={() => setIsModalOpen(true)}
-                    className="bg-gradient-to-r from-black via-[#013557] to-black text-white font-bold text-center text-3xl md:text-2xl py-4 px-8 rounded-lg w-full max-w-2xl mx-auto block mb-16 transition-all duration-300">
-                      Aprende a ser un PITCHER PARTNER
-                    </h1>
+                                <h1
+                 onClick={handleScroll}
+                className="bg-gradient-to-r from-black via-[#013557] to-black text-white font-bold text-center text-3xl md:text-2xl py-4 px-8 rounded-lg w-full max-w-2xl mx-auto block mb-16 transition-all duration-300"
+              >
+                <span className="text-3xl md:text-3xl block">Estoy listo para...</span>
+                <span className="text-xs md:text-lg block">Ayudar a mi primer influencer y generar ingresos</span>
+              </h1>
+
 
                     <div className="relative mb-12 w-full">
                       <img src="/mockup.png" alt="Mockup" className="w-full h-auto" />
@@ -219,16 +244,16 @@ export default function WorkshopLanding() {
       <p className="text-lg pb-1">Tenes una garantia de 7 dias</p>
       <button 
       onClick={() => setIsModalOpen(true)}
-        className="flex justify-center items-center  gap-2 bg-gradient-to-r from-black via-[#013557] to-black text-white text-xl md:text-2xl font-medium py-4 px-8 rounded-lg w-full transition-all duration-300 hover:scale-105" 
+        className="flex justify-center items-center  gap-2 bg-gradient-to-r from-black via-[#013557] to-black text-white text-md md:text-2xl font-medium py-4 px-8 rounded-lg w-full transition-all duration-300 hover:scale-105" 
       >
-        Accede al curso ahora
+        Accede al entrenamiento ahora
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
   <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
 </svg>
 
       </button>
-      <p className="text-sm pt-1 pb-1">Si queres pagar con crypto, <a 
+      <p className="text-sm pt-1 pb-1 underline">Si queres pagar con crypto, <a 
         href="https://api.whatsapp.com/send?phone=+5493516361259&text=Hola,%20quiero%20inscribirme%20a%20Go%20Pitchering%20v%C3%ADa%20Crypto,%20gracias" 
         target="_blank" 
         rel="noopener noreferrer" 
@@ -405,7 +430,7 @@ export default function WorkshopLanding() {
         {/*FIN BULLETS POINTS */}
 
           {/* BONUS */}
-        <div  className="flex justify-center items-center relative w-[100%] mt-4 mb-2">
+        <div   className="flex justify-center items-center relative w-[100%] mt-4 mb-2">
           <div
             className="relative flex flex-col justify-center items-center text-white text-center w-[100%] w-full md:max-w-2xl lg:max-w-4xl "
             style={{
@@ -416,7 +441,7 @@ export default function WorkshopLanding() {
               minHeight: "700px",
             }}
           >
-            <div className="bg-[#f9bc66]/80 w-11/12 md:w-1/2 p-2 rounded-3xl mt-5 md:p-5">
+            <div ref={containerRef} className="bg-[#f9bc66]/80 w-11/12 md:w-1/2 p-2 rounded-3xl mt-5 md:p-5">
               <h1 className="text-3xl md:text-4xl font-bold p-1 tracking-wider ">
                 BONUS TEMPORALES
               </h1>
@@ -448,23 +473,43 @@ export default function WorkshopLanding() {
 
             <button
               onClick={() => setIsModalOpen(true)}
-              className="mt-5 bg-gradient-to-r from-black via-[#013557] to-black text-white text-xl md:text-2xl font-medium py-4 px-8 rounded-lg w-11/12 md:w-3/4 max-w-2xl mx-auto block mb-1 animate-bounce"
+              className="mt-6 bg-gradient-to-r from-black via-[#013557] to-black text-white text-xl md:text-2xl font-medium py-2 px-8 rounded-lg w-11/12 md:w-3/4 max-w-2xl mx-auto block mb-1 animate-bounce"
               style={{ backgroundSize: "200%", backgroundPosition: "center" }}
             >
-              ¡Quiero también el bonus!
+                <span className="text-1xl md:text-3xl block">ACCEDE A TU VENTAJA UNICA</span>
+                <span className="text-xs md:text-lg block">Estas 2 herramientas pueden cambiar TODO en tu negocio</span>
             </button>
           </div>
+          <div>
+          {isVisibleWhat && (
+          <div className="fixed bottom-8 right-8 bg-white p-3 rounded-full shadow-lg transition-opacity duration-300">
+            <svg
+              height="60px"
+              width="60px"
+              viewBox="0 0 58 58"
+              xmlns="http://www.w3.org/2000/svg"
+              
+            >
+              <path d="M0,58l4.988-14.963C2.457,38.78,1,33.812,1,28.5C1,12.76,13.76,0,29.5,0S58,12.76,58,28.5 S45.24,57,29.5,57c-4.789,0-9.299-1.187-13.26-3.273L0,58z"></path>
+              <path
+                fill="#FFFFFF"
+                d="M47.683,37.985c-1.316-2.487-6.169-5.331-6.169-5.331c-1.098-0.626-2.423-0.696-3.049,0.42 c0,0-1.577,1.891-1.978,2.163c-1.832,1.241-3.529,1.193-5.242-0.52l-3.981-3.981l-3.981-3.981c-1.713-1.713-1.761-3.41-0.52-5.242 c0.272-0.401,2.163-1.978,2.163-1.978c1.116-0.627,1.046-1.951,0.42-3.049c0,0-2.844-4.853-5.331-6.169 c-1.058-0.56-2.357-0.364-3.203,0.482l-1.758,1.758c-5.577,5.577-2.831,11.873,2.746,17.45l5.097,5.097l5.097,5.097 c5.577,5.577,11.873,8.323,17.45,2.746l1.758-1.758C48.048,40.341,48.243,39.042,47.683,37.985z"
+              ></path>
+            </svg>
+          </div>
+        )}          </div>
+
         </div>
           {/* FIN BONUS */}
 
 
         {/* FINAL */}
-        <div className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 w-full mx-5 shadow-lg mt-1">          <div className="rounded-xl p-6 md:p-8 max-w-2xl mx-auto text-center md:text-left">
+        <div  className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 w-full mx-5 shadow-lg mt-1 ">          <div className="rounded-xl p-6 md:p-8 max-w-2xl mx-auto text-center md:text-left">
             <h1 className="text-black text-3xl font-bold">Entonces, esto es lo que obtendrás</h1>
             <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-10 text-[#f9bc66] border-b-4 border-[#f9bc66] animate-typing">
               POR LOS PRÓXIMOS 60 MINUTOS:
             </h2>
-            <img src="/mockup.png" alt="Mockup" className="mb-5 w-full h-auto rounded-lg " />
+            <img src="/mockup.png" ref={lastSectionRef} alt="Mockup" className="mb-5 w-full h-auto rounded-lg " />
             <div className="space-y-4 text-base md:text-lg">
               {[
                 { name: "SISTEMA DE LANZAMIENTO GO PITCHERING....", value: "$997 usd" },
@@ -497,10 +542,23 @@ export default function WorkshopLanding() {
               </h3>
               <button
                  onClick={() => setIsModalOpen(true)}
-                className="bg-gradient-to-r from-black via-[#013557] to-black text-white text-xl md:text-2xl font-medium py-4 px-8 rounded-lg w-full max-w-md mt-5 transition-all duration-300 hover:scale-105"
+                className="flex justify-center bg-gradient-to-r from-black via-[#013557] to-black text-white text-md gap-2 md:text-2xl font-medium py-4 px-8 rounded-lg w-full max-w-md mt-5 transition-all duration-300 hover:scale-105"
               >
-                ¡Quiero también el bonus!
+                 Accede al entrenamiento ahora
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
+</svg>
+
               </button>
+              <a 
+        href="https://api.whatsapp.com/send?phone=+5493516361259&text=Hola,%20quiero%20inscribirme%20a%20Go%20Pitchering%20v%C3%ADa%20Crypto,%20gracias" 
+        className='underline mt-2'
+        target="_blank" 
+        rel="noopener noreferrer" 
+      >
+         Si queres pagar con crypto, Click aquí
+      </a>
               <img src="/GARANTIA.png" className='mt-3' alt="" />
             </div>
           </div>
