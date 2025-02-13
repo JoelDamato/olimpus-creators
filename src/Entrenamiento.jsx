@@ -241,8 +241,8 @@ export default function WorkshopLanding() {
 
       </button>
       <a 
-   href="https://api.whatsapp.com/send?phone=5493516361259&text=Hola,%20quiero%20inscribirme%20a%20Go%20Pitchering%20v%C3%ADa%20Crypto,%20gracias" 
-   className='underline'
+      href="https://api.whatsapp.com/send?phone=5493516361261&text=Hola,%20quiero%20inscribirme%20a%20Go%20Pitchering%20v%C3%ADa%20Crypto,%20gracias" 
+      className='underline'
    target="_blank" 
    rel="noopener noreferrer" 
  >
