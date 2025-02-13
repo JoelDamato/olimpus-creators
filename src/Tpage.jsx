@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const CheckoutPage = () => {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    let currentProgress = 0;
+    const interval = setInterval(() => {
+      currentProgress += 1;
+      setProgress(currentProgress);
+      if (currentProgress >= 90) {
+        clearInterval(interval);
+      }
+    }, 50); // Ajusta este valor para una animación más lenta o rápida
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div
     className="min-h-screen flex flex-col items-center justify-center overflow-x-hidden"
@@ -9,13 +24,17 @@ const CheckoutPage = () => {
       fontFamily: "Lato, sans-serif",
     }}
   >
-    <div className="min-h-screen bg-white text-white flex w-[90%] rounded-lg flex-col items-center mt-5 p-4">
-      {/* Barra de progreso */}
+    <div className="min-h-screen bg-white text-white flex w-[90%] rounded-lg flex-col items-center mt-5 mb-2 p-4">
+    {/* Barra de progreso */}
+
       <div className="w-full max-w-md p-4 rounded-xl text-center">
         <p className="text-red-500 font-bold">🔴 ¡TU ACCESO ESTÁ CASI LISTO!</p>
-        <div className="w-full bg-gray-700 rounded-full h-6 mt-2 relative">
-          <div className="bg-red-500 text-white h-full flex items-center justify-center text-sm font-bold rounded-full" style={{ width: "90%" }}>
-            90% COMPLETADO
+        <div className="w-full bg-gray-700 rounded-full h-6 mt-2 relative overflow-hidden">
+          <div
+            className="bg-red-500 text-white h-full flex items-center justify-center text-sm font-bold rounded-full transition-all duration-1000"
+            style={{ width: `${progress}%` }}
+          >
+            {progress}% COMPLETADO
           </div>
         </div>
       </div>
@@ -58,7 +77,14 @@ const CheckoutPage = () => {
                 fill="#000000"
                 d="M47.683,37.985c-1.316-2.487-6.169-5.331-6.169-5.331c-1.098-0.626-2.423-0.696-3.049,0.42 c0,0-1.577,1.891-1.978,2.163c-1.832,1.241-3.529,1.193-5.242-0.52l-3.981-3.981l-3.981-3.981c-1.713-1.713-1.761-3.41-0.52-5.242 c0.272-0.401,2.163-1.978,2.163-1.978c1.116-0.627,1.046-1.951,0.42-3.049c0,0-2.844-4.853-5.331-6.169 c-1.058-0.56-2.357-0.364-3.203,0.482l-1.758,1.758c-5.577,5.577-2.831,11.873,2.746,17.45l5.097,5.097l5.097,5.097 c5.577,5.577,11.873,8.323,17.45,2.746l1.758-1.758C48.048,40.341,48.243,39.042,47.683,37.985z"
               ></path>
-            </svg> ¡Click aquí para confirmar mi compra!
+            </svg>       <a 
+   href="https://api.whatsapp.com/send?phone=5493516361261&text=¡Click%20aquí%20para%20confirmar%20mi%20compra!" 
+   className='underline'
+   target="_blank" 
+   rel="noopener noreferrer" 
+ >
+    ¡Click aquí para confirmar mi compra!
+ </a> 
 
 </button>
 
