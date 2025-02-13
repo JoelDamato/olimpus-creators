@@ -494,7 +494,7 @@ export default function WorkshopLanding() {
      
 
         {/* FINAL */}
-        <div  className="bg-white rounded-2xl max-w-4xl w-[92%] p-2 md:p-6 mx-5 shadow-lg mt-1 ">         
+        <div  className="bg-white rounded-2xl max-w-4xl w-[90%] p-2 md:p-6 mx-5 shadow-lg mt-1 ">         
          <div className="rounded-xl p-6 md:p-8 max-w-2xl mx-auto text-center md:text-left">
             <h1 className="text-black text-3xl font-bold">Entonces, esto es lo que obtendrás</h1>
             <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-10 text-[#f9bc66] border-b-4 border-[#f9bc66] animate-typing">
