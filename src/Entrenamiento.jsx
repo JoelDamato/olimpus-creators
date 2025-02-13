@@ -7,21 +7,7 @@ export default function WorkshopLanding() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const videoRef = useRef(null);
   const lastSectionRef = useRef(null);
-const [isVisibleWhat, setIsVisibleWhat] = useState(false);
-    const containerRef = useRef(null);
-  
-    useEffect(() => {
-      const handleScroll = () => {
-        if (containerRef.current) {
-          const { top, bottom } = containerRef.current.getBoundingClientRect();
-          const isInside = top < window.innerHeight && bottom > 0;
-          setIsVisibleWhat(isInside);
-        }
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+
 
   
     const handleScroll = () => {
@@ -123,14 +109,15 @@ const [isVisibleWhat, setIsVisibleWhat] = useState(false);
         >
          🌍 Soy de Otros Pais
         </a>
-       <a 
-        href="https://api.whatsapp.com/send?phone=+5493516361259&text=Hola,%20quiero%20inscribirme%20a%20Go%20Pitchering%20v%C3%ADa%20Crypto,%20gracias" 
-        className='underline'
-        target="_blank" 
-        rel="noopener noreferrer" 
-      >
-         Si queres pagar con crypto, Click aquí
-      </a>
+            <a 
+      href="https://api.whatsapp.com/send?phone=5493516361259&text=Hola,%20quiero%20inscribirme%20a%20Go%20Pitchering%20v%C3%ADa%20Crypto,%20gracias" 
+      className='underline'
+      target="_blank" 
+      rel="noopener noreferrer" 
+    >
+        Si queres pagar con crypto, Click aquí
+    </a>
+
       </div>
     </div>
   </div>
@@ -145,13 +132,13 @@ const [isVisibleWhat, setIsVisibleWhat] = useState(false);
       }}
     >
         {/* HEADER */}
-        <img src="/gopit.png" className="my-5" alt="Logo" />
-        <h2 className="text-lg md:text-2xl text-white text-center font-medium px-4">
+        <img src="/gopit.png" className="w-[90%] my-3 md:my-5" alt="Logo" />
+        <h2 className="text-md md:text-2xl text-white text-center font-medium px-4">
           Para trabajar digital en 2025 no necesitas miles de seguidores ni invertir en publicidad, este es el camino más rápido...
         </h2>
 
 
-        <div className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 w-full mx-5 shadow-lg mt-7">
+        <div className="bg-white rounded-2xl max-w-4xl w-[92%] p-2 md:p-6 w-full mx-5 shadow-lg mt-7">
           <header className="text-center">
             <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold leading-tight mb-2">
               Conviértete en Pitcher Partner y gana grandes comisiones con un método probado en solo 7 días
@@ -253,13 +240,15 @@ const [isVisibleWhat, setIsVisibleWhat] = useState(false);
 </svg>
 
       </button>
-      <p className="text-sm pt-1 pb-1 underline">Si queres pagar con crypto, <a 
-        href="https://api.whatsapp.com/send?phone=+5493516361259&text=Hola,%20quiero%20inscribirme%20a%20Go%20Pitchering%20v%C3%ADa%20Crypto,%20gracias" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-      >
-        Click aquí
-      </a></p>
+      <a 
+   href="https://api.whatsapp.com/send?phone=5493516361259&text=Hola,%20quiero%20inscribirme%20a%20Go%20Pitchering%20v%C3%ADa%20Crypto,%20gracias" 
+   className='underline'
+   target="_blank" 
+   rel="noopener noreferrer" 
+ >
+    Si queres pagar con crypto, Click aquí
+ </a>
+
       <p className="text-sm">Si la formacion no es lo que esperabas, te rembolsamos el 100% de tu dinero, sin preguntas.</p>
     </div>
                   </section>
@@ -329,7 +318,7 @@ const [isVisibleWhat, setIsVisibleWhat] = useState(false);
         {/* FIN REFERENCIAS */}
 
         {/* BULLETS POINTS */}
-        <div  className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 mx-5 shadow-lg mt-7">
+        <div  className="bg-white rounded-2xl max-w-4xl w-[92%] p-2 md:p-6 mx-5 shadow-lg mt-7">
   <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-8 text-[#f9bc66] border-b-4 border-[#f9bc66] whitespace-normal md:whitespace-nowrap animate-typing">
     Ahora... Conoce qué obtendrás dentro:
   </h2>
@@ -441,7 +430,7 @@ const [isVisibleWhat, setIsVisibleWhat] = useState(false);
               minHeight: "700px",
             }}
           >
-            <div ref={containerRef} className="bg-[#f9bc66]/80 w-11/12 md:w-1/2 p-2 rounded-3xl mt-5 md:p-5">
+            <div className="bg-[#f9bc66]/80 w-11/12 md:w-1/2 p-2 rounded-3xl mt-5 md:p-5">
               <h1 className="text-3xl md:text-4xl font-bold p-1 tracking-wider ">
                 BONUS TEMPORALES
               </h1>
@@ -480,13 +469,18 @@ const [isVisibleWhat, setIsVisibleWhat] = useState(false);
                 <span className="text-xs md:text-lg block">Estas 2 herramientas pueden cambiar TODO en tu negocio</span>
             </button>
           </div>
-          <div>
-          {isVisibleWhat && (
-          <div className="fixed bottom-8 right-8 bg-white p-3 rounded-full shadow-lg transition-opacity duration-300">
+          
+              </div>
+
+ 
+          {/* FIN BONUS */}
+
+          <div className="fixed bottom-4 bg-white right-0  p-3 rounded-full shadow-lg transition-opacity duration-300">
             <svg
-              height="60px"
-              width="60px"
+              height="40px"
+              width="40px"
               viewBox="0 0 58 58"
+              fill="#2ef152"
               xmlns="http://www.w3.org/2000/svg"
               
             >
@@ -497,14 +491,10 @@ const [isVisibleWhat, setIsVisibleWhat] = useState(false);
               ></path>
             </svg>
           </div>
-        )}          </div>
-
-        </div>
-          {/* FIN BONUS */}
-
+     
 
         {/* FINAL */}
-        <div  className="bg-white rounded-2xl max-w-4xl w-[96%] p-2 md:p-6 w-full mx-5 shadow-lg mt-1 ">          <div className="rounded-xl p-6 md:p-8 max-w-2xl mx-auto text-center md:text-left">
+        <div  className="bg-white rounded-2xl max-w-4xl w-[92%] p-2 md:p-6 w-full mx-5 shadow-lg mt-1 ">          <div className="rounded-xl p-6 md:p-8 max-w-2xl mx-auto text-center md:text-left">
             <h1 className="text-black text-3xl font-bold">Entonces, esto es lo que obtendrás</h1>
             <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-10 text-[#f9bc66] border-b-4 border-[#f9bc66] animate-typing">
               POR LOS PRÓXIMOS 60 MINUTOS:
@@ -552,13 +542,14 @@ const [isVisibleWhat, setIsVisibleWhat] = useState(false);
 
               </button>
               <a 
-        href="https://api.whatsapp.com/send?phone=+5493516361259&text=Hola,%20quiero%20inscribirme%20a%20Go%20Pitchering%20v%C3%ADa%20Crypto,%20gracias" 
-        className='underline mt-2'
-        target="_blank" 
-        rel="noopener noreferrer" 
-      >
-         Si queres pagar con crypto, Click aquí
-      </a>
+   href="https://api.whatsapp.com/send?phone=5493516361259&text=Hola,%20quiero%20inscribirme%20a%20Go%20Pitchering%20v%C3%ADa%20Crypto,%20gracias" 
+   className='underline'
+   target="_blank" 
+   rel="noopener noreferrer" 
+ >
+    Si queres pagar con crypto, Click aquí
+ </a>
+
               <img src="/GARANTIA.png" className='mt-3' alt="" />
             </div>
           </div>
