@@ -520,7 +520,7 @@ export default function WorkshopLanding() {
               </h3>
               <button
                  onClick={() => setIsModalOpen(true)}
-                className="flex justify-center bg-gradient-to-r from-black via-[#013557] to-black text-white text-md gap-2 md:text-2xl font-medium py-4 px-8 rounded-lg w-full max-w-md mt-5 transition-all duration-300 hover:scale-105"
+                className="flex justify-center bg-gradient-to-r from-black via-[#013557] to-black text-white text-sm gap-2 md:text-2xl font-medium py-4 px-8 rounded-lg w-full max-w-md mt-5 transition-all duration-300 hover:scale-105"
               >
                  Accede al entrenamiento ahora 
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
