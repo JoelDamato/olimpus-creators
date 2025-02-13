@@ -138,7 +138,7 @@ export default function WorkshopLanding() {
         </h2>
 
 
-        <div className="bg-white rounded-2xl max-w-4xl w-[92%] p-2 md:p-6 w-full mx-5 shadow-lg mt-7">
+        <div className="bg-white rounded-2xl max-w-4xl w-[90%] p-2 md:p-6 mx-5 shadow-lg mt-7">
           <header className="text-center">
             <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold leading-tight mb-2">
               Conviértete en Pitcher Partner y gana grandes comisiones con un método probado en solo 7 días
@@ -166,7 +166,7 @@ export default function WorkshopLanding() {
                 <div>
 
                   
-                  <section className="w-full max-w-4xl px-4 mt-2 bg-white">
+                  <section className="w-full max-w-4xl mt-2 bg-white">
                                 <h1
                  onClick={handleScroll}
                 className="bg-gradient-to-r from-black via-[#013557] to-black text-white font-bold text-center text-3xl md:text-2xl py-4 px-8 rounded-lg w-full max-w-2xl mx-auto block mb-16 transition-all duration-300"
@@ -318,7 +318,7 @@ export default function WorkshopLanding() {
         {/* FIN REFERENCIAS */}
 
         {/* BULLETS POINTS */}
-        <div  className="bg-white rounded-2xl max-w-4xl w-[92%] p-2 md:p-6 mx-5 shadow-lg mt-7">
+        <div  className="bg-white rounded-2xl max-w-4xl w-[90%] p-2 md:p-6 mx-5 shadow-lg mt-7">
   <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-8 text-[#f9bc66] border-b-4 border-[#f9bc66] whitespace-normal md:whitespace-nowrap animate-typing">
     Ahora... Conoce qué obtendrás dentro:
   </h2>
@@ -494,7 +494,8 @@ export default function WorkshopLanding() {
      
 
         {/* FINAL */}
-        <div  className="bg-white rounded-2xl max-w-4xl w-[92%] p-2 md:p-6 w-full mx-5 shadow-lg mt-1 ">          <div className="rounded-xl p-6 md:p-8 max-w-2xl mx-auto text-center md:text-left">
+        <div  className="bg-white rounded-2xl max-w-4xl w-[92%] p-2 md:p-6 mx-5 shadow-lg mt-1 ">         
+         <div className="rounded-xl p-6 md:p-8 max-w-2xl mx-auto text-center md:text-left">
             <h1 className="text-black text-3xl font-bold">Entonces, esto es lo que obtendrás</h1>
             <h2 className="mb-5 text-2xl sm:text-3xl md:text-4xl font-bold text-center mt-10 text-[#f9bc66] border-b-4 border-[#f9bc66] animate-typing">
               POR LOS PRÓXIMOS 60 MINUTOS:
@@ -547,7 +548,7 @@ export default function WorkshopLanding() {
    target="_blank" 
    rel="noopener noreferrer" 
  >
-    Si queres pagar con crypto, Click aquí test
+    Si queres pagar con crypto, Click aquí
  </a>
 
               <img src="/GARANTIA.png" className='mt-3' alt="" />
