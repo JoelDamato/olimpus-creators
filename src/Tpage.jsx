@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const CheckoutPage = () => {
   const [progress, setProgress] = useState(0);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
     let currentProgress = 0;
-    const interval = setInterval(() => {
+    intervalRef.current = setInterval(() => {
       currentProgress += 1;
       setProgress(currentProgress);
       if (currentProgress >= 90) {
-        clearInterval(interval);
+        clearInterval(intervalRef.current);
       }
-    }, 50); // Ajusta este valor para una animación más lenta o rápida
+    }, 50);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(intervalRef.current);
   }, []);
 
   return (
@@ -26,18 +27,19 @@ const CheckoutPage = () => {
   >
     <div className="min-h-screen bg-white text-white flex w-[90%] rounded-lg flex-col items-center mt-5 mb-2 p-4">
     {/* Barra de progreso */}
-
-      <div className="w-full max-w-md p-4 rounded-xl text-center">
-        <p className="text-red-500 font-bold">🔴 ¡TU ACCESO ESTÁ CASI LISTO!</p>
-        <div className="w-full bg-gray-700 rounded-full h-6 mt-2 relative overflow-hidden">
-          <div
-            className="bg-red-500 text-white h-full flex items-center justify-center text-sm font-bold rounded-full transition-all duration-1000"
-            style={{ width: `${progress}%` }}
-          >
-            {progress}% COMPLETADO
-          </div>
+    <div className="w-full max-w-md p-4 rounded-xl text-center">
+      <p className="text-red-500 font-bold">🔴 ¡TU ACCESO ESTÁ CASI LISTO!</p>
+      <div className="w-full bg-gray-700 rounded-full h-6 mt-2 relative overflow-hidden">
+        <div
+          className={`bg-red-500 h-full flex items-center justify-center text-sm font-bold rounded-full transition-all duration-1000 ${
+            progress > 50 ? "text-white" : "text-red-500"
+          }`}
+          style={{ width: `${progress}%`, textShadow: "0px 0px 4px rgba(0,0,0,0.5)" }}
+        >
+          {progress}%
         </div>
       </div>
+    </div>
 
       {/* Mensaje principal */}
       <div className="text-center mt-6">
@@ -48,12 +50,7 @@ const CheckoutPage = () => {
 
       {/* Formulario embed de Notion */}
       <div className="w-full max-w-md mt-6">
-        <iframe
-          className="w-full h-[62rem] rounded-xl"
-          src="https://www.notion.so/erickgomezacademy/1960dad84cb7803e874de8f741bbfc9b?pvs=106"
-          title="Formulario de acceso"
-          allowFullScreen
-        ></iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScP6QmTIdq0-OZRAsdRkGPixOLCkXcYP8kS8f1Qvtc3HIQrVA/viewform?embedded=true" className="w-full h-[70rem]">Cargando…</iframe>
       </div>
 
       {/* Mensaje y botón de WhatsApp */}
