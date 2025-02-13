@@ -534,7 +534,7 @@ export default function WorkshopLanding() {
                  onClick={() => setIsModalOpen(true)}
                 className="flex justify-center bg-gradient-to-r from-black via-[#013557] to-black text-white text-md gap-2 md:text-2xl font-medium py-4 px-8 rounded-lg w-full max-w-md mt-5 transition-all duration-300 hover:scale-105"
               >
-                 Accede al entrenamiento ahora
+                 Accede al entrenamiento ahora 
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
   <path stroke-linecap="round" stroke-linejoin="round" d="M15.91 11.672a.375.375 0 0 1 0 .656l-5.603 3.113a.375.375 0 0 1-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112Z" />
@@ -547,7 +547,7 @@ export default function WorkshopLanding() {
    target="_blank" 
    rel="noopener noreferrer" 
  >
-    Si queres pagar con crypto, Click aquí
+    Si queres pagar con crypto, Click aquí test
  </a>
 
               <img src="/GARANTIA.png" className='mt-3' alt="" />
