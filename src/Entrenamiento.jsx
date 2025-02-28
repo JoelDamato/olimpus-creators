@@ -190,7 +190,7 @@ export default function WorkshopLanding() {
             />
           </div>
 
-        
+      
         </div>
 
         {isUnlocked && (
