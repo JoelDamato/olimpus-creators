@@ -12,6 +12,13 @@ export default function WorkshopLanding() {
   const videoRef = useRef(null)
   const [isUnlocked, setIsUnlocked] = useState(false)
 
+  const handleScroll2 = () => {
+    const element = document.getElementById("bonusSection");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
   useEffect(() => {
     const handleMessage = (event) => {
       try {
@@ -44,26 +51,7 @@ export default function WorkshopLanding() {
     lastSectionRef.current?.scrollIntoView({ behavior: "smooth" })
   }
 
-  // Remove or comment out this useEffect since we've combined its functionality with the one above
-  /*
-  useEffect(() => {
-    // Escuchar mensajes del iframe
-    const handleMessage = (event) => {
-      const { data } = event;
-      if (data.message === "panda_timeupdate") {
-        console.log(`Tiempo actual del video: ${data.currentTime}s`);
-        // Mostrar contenido adicional si el tiempo alcanza 18 segundos
-        if (data.currentTime >= 18) {
-          setShowExtraContent(true);
-        }
-      }
-    };
-
-    window.addEventListener("message", handleMessage);
-    return () => window.removeEventListener("message", handleMessage);
-  }, []);
-  */
-
+  
   useEffect(() => {
     const link = document.createElement("link")
     link.href = "https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
@@ -189,8 +177,14 @@ export default function WorkshopLanding() {
               title="Video"
             />
           </div>
-
-      
+          {showExtraContent && (
+          <button
+                    onClick={handleScroll2}
+                    className="bg-gradient-to-r from-black via-[#013557] to-black text-white font-bold text-center text-3xl md:text-2xl py-4 px-8 rounded-lg w-full max-w-2xl mx-auto block mb-16 transition-all duration-300"
+                  >
+                    <span className="text-3xl md:text-3xl block">Quiero el Bonus!</span>
+                  </button>
+)}      
         </div>
 
         {isUnlocked && (
@@ -456,7 +450,7 @@ export default function WorkshopLanding() {
             {/* BONUS */}
             {showExtraContent && (
 
-            <div className="flex justify-center items-center relative w-[100%] mt-4 mb-2">
+            <div id="bonusSection" className="flex justify-center items-center relative w-[100%] mt-4 mb-2">
               <div
                 className="relative flex flex-col justify-center items-center text-white text-center w-[100%] w-full md:max-w-2xl lg:max-w-4xl "
                 style={{
