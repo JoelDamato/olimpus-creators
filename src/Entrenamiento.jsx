@@ -179,12 +179,12 @@ export default function WorkshopLanding() {
           </div>
 <div className="flex flex-col items-center">
 <h4>Reconocido por:</h4>
-<img src="https://i.ibb.co/zWjZTs6t/0780d978-2bed-4273-939e-ca2da4f1ed54.png" className="w-1/2" alt="" />
+<img src="/forbes.webp" className="w-1/2" alt="" />
 </div>
 {!isUnlocked && (
 <footer className="mt-1 text-center text-sm text-gray-500 p-4">
                 <p className="mb-2">© 2025 Go Pitchering. All Rights Reserved.</p>
-                <p className="max-w-2xl mx-auto">
+                <p className="max-w-2xl text-sm mx-auto">
                   Descargo de Responsabilidad: Este producto no garantiza la obtención de resultados. Las referencias al
                   desarrollo de una determinada estrategia no deben ser interpretadas como una garantía de resultados.
                   Esta página no es parte de la página de Meta o de Meta, Inc.
