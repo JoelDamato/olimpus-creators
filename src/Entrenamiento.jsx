@@ -177,12 +177,26 @@ export default function WorkshopLanding() {
               title="Video"
             />
           </div>
+<div className="flex flex-col items-center">
+<h4>Reconocido por:</h4>
+<img src="https://i.ibb.co/zWjZTs6t/0780d978-2bed-4273-939e-ca2da4f1ed54.png" className="w-1/2" alt="" />
+</div>
+{!isUnlocked && (
+<footer className="mt-1 text-center text-sm text-gray-500 p-4">
+                <p className="mb-2">© 2025 Go Pitchering. All Rights Reserved.</p>
+                <p className="max-w-2xl mx-auto">
+                  Descargo de Responsabilidad: Este producto no garantiza la obtención de resultados. Las referencias al
+                  desarrollo de una determinada estrategia no deben ser interpretadas como una garantía de resultados.
+                  Esta página no es parte de la página de Meta o de Meta, Inc.
+                </p>
+              </footer>
+)}
           {showExtraContent && (
           <button
                     onClick={handleScroll2}
-                    className="bg-gradient-to-r from-black via-[#013557] to-black text-white font-bold text-center text-3xl md:text-2xl py-4 px-8 rounded-lg w-full max-w-2xl mx-auto block mb-16 transition-all duration-300"
+                    className="mt-5 bg-gradient-to-r from-black via-[#013557] to-black text-white font-bold text-center text-3xl md:text-2xl py-4 px-8 rounded-lg w-full max-w-2xl mx-auto block mb-16 transition-all duration-300"
                   >
-                    <span className="text-3xl md:text-3xl block">Quiero el Bonus!</span>
+                    <span className="text-3xl md:text-3xl block ">Quiero el Bonus!</span>
                   </button>
 )}      
         </div>
