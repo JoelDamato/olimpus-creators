@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
       },
+      colors: {
+        olimpus: "#EE7507",
+      },
     },
   },
   plugins: [],
