@@ -1,6 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom';
-import Entrenamiento from './Entrenamiento';
-import Tpage from './Tpage'
+import { Routes, Route } from 'react-router-dom';
 import Home from './Home';
 
 function App() {
@@ -8,8 +6,6 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/entrenamiento" element={<Entrenamiento />} />
-        <Route path="/tpage" element={<Tpage />} />
       </Routes>
 
   );
