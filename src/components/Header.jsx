@@ -14,10 +14,10 @@ export default function Header() {
             className="w-3/4 object-cover"
           />
           <p
-            className="text-start  text-[20px] sm:text-[40px] md:text-[55px] md:m-9"
+            className="text-start  text-[20px] sm:text-[40px] md:text-[55px] md:m-9 font-cincel"
             style={{
               zIndex:3,
-              fontFamily: "Roboto",
+              // fontFamily: 'Cincel',
               fontStyle: "normal",
               XTwg7g: 0,
               color: "fff",
