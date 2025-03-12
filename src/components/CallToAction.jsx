@@ -1,3 +1,5 @@
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
+
 export default function CallToAction() {
   return (
     <>
@@ -33,7 +35,8 @@ export default function CallToAction() {
             </div>
 
             <div className="absolute bottom-[10%] left-0 right-0 text-center text-[#90766A] font-normal  text-[13px] md:text-4xl font-sans">
-              Desbloquear el Olimpo de la Viralidad
+              <p className="inline-flex items-center gap-1" >
+                Desbloquear el Olimpo de la Viralidad  <ArrowRightIcon className=" w-3 h-3 text-[#90766A]" /></p>
             </div>
           </div>
         </div>

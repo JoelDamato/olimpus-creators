@@ -11,13 +11,12 @@ export default function Header() {
             src="/HEAD-OLIMPUS-AZUL.png"
             alt="Olimpus Creators"
             style={{ zIndex: 4 }}
-            className="w-3/4 object-cover"
+            className="w-3/6 md:w-3/4 object-cover"
           />
           <p
-            className="text-start  text-[20px] sm:text-[40px] md:text-[55px] md:m-9 font-cincel"
+            className="text-start mt-3 text-[15px] sm:text-[40px] md:text-[55px] md:m-9 font-cincel"
             style={{
               zIndex:3,
-              // fontFamily: 'Cincel',
               fontStyle: "normal",
               XTwg7g: 0,
               color: "fff",
@@ -33,7 +32,7 @@ export default function Header() {
         <img
           src="/ZEUS-HEAD.PNG"
           alt="Zeus con celular"
-           className="w-1/2 md:w-1/3 object-cover absolute right-[-20%] top-[-20%] md:right-0 md:top-0"
+           className="w-3/4 md:w-1/3 object-cover absolute right-[-20%] top-[-20%] md:right-0 md:top-0"
         />
       </div>
       <div className="flex justify-center items-center md:items-center md:justify-start">
