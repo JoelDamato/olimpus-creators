@@ -5,7 +5,7 @@ export default function ViralitySectionOne() {
       <div className="w-1/3 md:w-1/3 flex justify-center">
         <img src="/ESTATUA-FOTO.png" alt="Figura viral" className="w-full max-w-xs md:max-w-sm ml-[-30%]" />
       </div>
-      <div className="w-2/3 md:w-2/4 flex flex-col gap-2 md:gap-6 relative" >
+      <div className="w-2/3 md:w-2/4 flex flex-col gap-3 md:gap-6 relative" >
         {[
           "MÁS DE 50 000 CLIPS PREMIUM PARA TIKTOK Y REELS.",
           "GUÍA VIRAL: ESTRATEGIAS COMPROBADAS PARA VIRALIZAR.",

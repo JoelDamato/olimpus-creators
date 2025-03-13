@@ -1,10 +1,10 @@
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import UnblockNow from "./UnblockNow";
 
 export default function CallToAction() {
   return (
     <>
       <div className="flex flex-row md:flex-row items-center justify-center mt-6 w-full gap-2">
-        {/* Left Side - Hermes Image */}
         <div className="w-1/3 md:w-1/3 flex justify-center">
           <img
             src="/HERMES-MAC-AZUL.PNG"
@@ -13,16 +13,8 @@ export default function CallToAction() {
           />
         </div>
 
-        {/* Right Side - CTA Images */}
         <div className="w-full md:w-2/3 flex flex-col items-center gap-6">
-          {/* <img src="/CTA-1.PNG" alt="CTA 1" className="w-full max-w-4xl" />
-           */}
-          <div className="relative w-full max-w-4xl">
-            <img src="/CTA-1.PNG" alt="CTA 1" className="w-full" />
-            <div className="absolute inset-0 flex items-center justify-end mr-2 md:mr-9 text-white text-[14px] md:text-[40px] font-bold font-cincel">
-              DESBLOQUEA AHORA (USD 14.99)
-            </div>
-          </div>
+          <UnblockNow/>
           <div className="relative w-full max-w-4xl">
             <img src="/CTA-2.PNG" alt="CTA 2" className="w-full" />
 
