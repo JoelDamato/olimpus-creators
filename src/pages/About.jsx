@@ -15,7 +15,7 @@ export default function About() {
       <ViralitySectionTwo />
       <div className="w-4/5 flex justify-center">
         <UnblockNow
-          textSize="text-[16px] md:text-[50px]"
+          textSize="text-[16px] md:text-[40px]"
           padding="mr-4 md:mr-12"
         />
       </div>

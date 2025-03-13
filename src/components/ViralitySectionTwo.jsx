@@ -1,8 +1,10 @@
 export default function ViralitySectionTwo() {
   return (
     <>
-      <div className="w-full flex mt-1">
-      <div className="w-2/3 md:w-2/3 flex flex-col gap-3 relative" >
+      {/* <div className="w-full flex mt-1"> */}
+      <div className="flex mt-4 md:mt-6 md:justify-center md:items-center">
+
+      <div className="w-2/3 md:w-2/4 flex flex-col gap-3 md:gap-6 relative" >
         {[
           "CONTENIDO 100% ORGANIZADO PARA QUE ENCUENTRES TODO.",
           "LICENCIA PARA LA REVENTA CON UN BENEFICIO DEL 80% PARA VOS.",
