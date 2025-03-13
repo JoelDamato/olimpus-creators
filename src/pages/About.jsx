@@ -2,25 +2,16 @@ import React from "react";
 import Header from "../components/Header";
 import Description from "../components/Description";
 import CallToAction from "../components/CallToAction";
+import Virality from "../components/ViralityTitle";
+import ViralitySectionOne from "../components/ViralitySectionOne";
+import ViralitySectionTwo from "../components/ViralitySectionTwo";
 
 export default function About () {
   return (
-    <div className="bg-olimpus flex items-center justify-center  w-full gap-2">
-         <div className="w-1/4 md:w-1/3 flex justify-center">
-        <img src="/LOGO.png"
-        className=""
-        alt="logo-olimpus" />
-        </div>
-        <div className="w-full md:w-2/3 flex flex-col items-center gap-6">
-        <h1 className="text-2xl md:text-4xl font-bold text-center mb-4 text-blue-600">
-          EL OLIMPO DE LA VIRALIDAD
-        </h1>
-        <p className="text-center text-sm md:text-base font-medium text-gray-700">
-          No vendemos clips, te entregamos el modelo de negocio completo + los
-          clips más virales testeados por nosotros que nadie está utilizando en
-          habla hispana aún y pueden ayudarte a crecer si comienzas AHORA.
-        </p>
-        </div>
+    <div className="bg-olimpus flex flex-col items-center justify-center  w-full gap-2 mt-[-2%]">
+      <Virality/>
+      <ViralitySectionOne/>
+      <ViralitySectionTwo/>
 
         {/* <ul className="mt-4 space-y-2 text-sm md:text-base text-gray-700">
           <li>1. MÁS DE 50 000 CLIPS PREMIUM PARA TIKTOK Y REELS.</li>
