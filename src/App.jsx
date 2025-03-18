@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
+import { Package } from './pages/Package';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div>
       <Home />
       <About />
+      <Package />
     </div>
 
   );
