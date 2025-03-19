@@ -8,10 +8,14 @@ module.exports = {
       fontFamily: {
         // lato: ['Lato', 'sans-serif', 'Cincel'],
         cincel: [ 'Cincel'],
-        sans: [ 'DM Sans']
+        sans: [ 'DM Sans'],
+        bebas: [ 'Bebas Neue']
       },
       colors: {
         olimpus: "#EE7507",
+        olimpusBlue: "#025570",
+        successGreen: "#0d802a",
+        red: "#ff0000"
       },
     },
   },
