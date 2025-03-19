@@ -1,16 +1,14 @@
 import React from "react";
-import Header from "../components/Header";
-import Description from "../components/Description";
 import UnblockNow from "../components/UnblockNow";
-import Virality from "../components/ViralityTitle";
-import ViralitySectionOne from "../components/ViralitySectionOne";
-import ViralitySectionTwo from "../components/ViralitySectionTwo";
-import Guarantee from "../components/Guarantee";
+import ViralityTitle from "../components/sectionTwo/ViralityTitle";
+import ViralitySectionOne from "../components/sectionTwo/ViralitySectionOne";
+import ViralitySectionTwo from "../components/sectionTwo/ViralitySectionTwo";
+import Guarantee from "../components/sectionTwo/Guarantee";
 
 export default function About() {
   return (
     <div className="bg-olimpus flex flex-col items-center justify-center  w-full gap-2 mt-[-2%]">
-      <Virality />
+      <ViralityTitle />
       <ViralitySectionOne />
       <ViralitySectionTwo />
       <div className="w-4/5 flex justify-center">

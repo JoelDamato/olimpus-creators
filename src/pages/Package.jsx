@@ -1,4 +1,4 @@
-import Guarantee from "../components/Guarantee";
+import Guarantee from "../components/sectionTwo/Guarantee";
 import UnblockNow from "../components/UnblockNow";
 
 export function Package(){

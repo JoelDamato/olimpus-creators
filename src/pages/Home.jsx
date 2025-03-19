@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../components/Header";
-import Description from "../components/Description";
-import CallToAction from "../components/CallToAction";
+import Header from "../components/sectionOne/Header";
+import Description from "../components/sectionOne/Description";
+import CallToAction from "../components/sectionOne/CallToAction";
 
 const Home = () => {
   return (

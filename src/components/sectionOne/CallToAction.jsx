@@ -1,5 +1,5 @@
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import UnblockNow from "./UnblockNow";
+import UnblockNow from "../UnblockNow";
 
 export default function CallToAction() {
   return (
