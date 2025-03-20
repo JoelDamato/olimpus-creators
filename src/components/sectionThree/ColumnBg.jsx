@@ -6,7 +6,7 @@ import { TextsList } from "./TextsList";
 export function ColumnBg() {
   return (
     <>
-      <div className="bg-olimpusBlue text-white md:p-8">
+      <div className="bg-secondary text-white md:p-8">
         <div
           className="relative w-full flex flex-col items-center p-1 text-center bg-cover bg-top"
           style={{ backgroundImage: "url('/COLUMNAS.png')", height: "67vh" }}

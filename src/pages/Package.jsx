@@ -8,7 +8,7 @@ export function Package(){
     <>
     <Steps />
     <ColumnBg/>
-    <div className="bg-olimpusBlue w-full p-1 ">
+    <div className="bg-secondary w-full p-1 ">
             <Guarantee />
     </div>
     </>

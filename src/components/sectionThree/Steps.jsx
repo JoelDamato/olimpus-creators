@@ -27,7 +27,7 @@ export default function Steps() {
   }, [nextSlide]);
 
   return (
-    <section className="relative bg-olimpusBlue flex flex-col items-center mb-[-10px]">
+    <section className="relative bg-secondary flex flex-col items-center mb-[-10px]">
       <div className="flex md:flex gap-6 justify-center items-center relative h-[200px]">
         <button
           onClick={prevSlide}

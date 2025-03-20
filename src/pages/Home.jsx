@@ -5,7 +5,7 @@ import CallToAction from "../components/sectionOne/CallToAction";
 
 const Home = () => {
   return (
-    <div className="bg-olimpus text-white p-4 md:p-10  relative">
+    <div className="bg-primary text-white p-4 md:p-10  relative">
       <Header />
       <Description />
       <CallToAction />

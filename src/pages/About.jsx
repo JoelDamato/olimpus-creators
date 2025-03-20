@@ -7,7 +7,7 @@ import Guarantee from "../components/sectionTwo/Guarantee";
 
 export default function About() {
   return (
-    <div className="bg-olimpus flex flex-col items-center justify-center  w-full gap-2 mt-[-2%]">
+    <div className="bg-primary flex flex-col items-center justify-center  w-full gap-2 mt-[-2%]">
       <ViralityTitle />
       <ViralitySectionOne />
       <ViralitySectionTwo />

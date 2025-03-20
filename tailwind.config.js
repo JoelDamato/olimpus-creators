@@ -11,10 +11,11 @@ module.exports = {
         bebas: ['Bebas Neue', 'sans-serif'],
       },
       colors: {
-        olimpus: "#EE7507",
-        olimpusBlue: "#025570",
+        primary: "#EE7507",
+        secondary: "#025570",
         successGreen: "#0d802a",
-        red: "#ff0000"
+        red: "#ff0000",
+        grey: "#1A1A1A"
       },
     },
   },

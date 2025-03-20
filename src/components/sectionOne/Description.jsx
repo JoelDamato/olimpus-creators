@@ -11,12 +11,12 @@ export default function Description(){
       color: 'fff',
       fontKerning: 'none',
       textDecoration: 'none',
-      textShadow: 'rgba(0, 0, 0, 0.59) 2px 1px 2px',
+      textShadow: 'rgba(0, 0, 0, 0.59) 2.65166px 2.65166px 2.92501px',
       letterSpacing: 1,
     }}
   >
     La única Library con{' '}
-    <span className="font-bold">+50.000 recursos únicos</span> para dominar los
+    <span>+50.000 recursos únicos</span> para dominar los
     Reels, Shorts y TikTok en 2025 sin usar los mismos clips que utilizan todos...
   </p>
 </div>
