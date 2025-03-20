@@ -15,7 +15,10 @@ module.exports = {
         secondary: "#025570",
         successGreen: "#0d802a",
         red: "#ff0000",
-        grey: "#1A1A1A"
+        grey: "#1A1A1A",
+        text: {
+          primary: "#FFFFFF"
+        }
       },
     },
   },
