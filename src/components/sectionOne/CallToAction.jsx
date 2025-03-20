@@ -22,7 +22,7 @@ export default function CallToAction() {
               4.95/5
             </div>
 
-            <div className="absolute bottom-[25%] left-0 right-0 text-center text-white font-normal text-[13px] md:text-4xl font-sans">
+            <div className="absolute bottom-[21%] left-0 right-0 text-center text-white font-normal text-[13px] md:text-4xl font-sans">
               9 de cada 10 NO tienen acceso a nuestros clips...
             </div>
 

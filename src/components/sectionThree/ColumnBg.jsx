@@ -20,10 +20,6 @@ export function ColumnBg() {
               textPart3={"INCLUYE ACTUALIZACIONES SEMANALES"}
             />
           </div>
-
-          {/* <div className="w-3/4">
-            <Guarantee />
-          </div> */}
         </div>
       </div>
     </>

@@ -6,10 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // lato: ['Lato', 'sans-serif', 'Cincel'],
-        cincel: [ 'Cincel'],
-        sans: [ 'DM Sans'],
-        bebas: [ 'Bebas Neue']
+        cincel: ['Cincel', 'serif'],
+        sans: ['DM Sans', 'sans-serif'],
+        bebas: ['Bebas Neue', 'sans-serif'],
       },
       colors: {
         olimpus: "#EE7507",
