@@ -14,8 +14,8 @@ export default function ViralitySectionTwo() {
             <div className="text-[14px] bg-[#1A1A1A] text-white p-2 pl-8 pr-4 md:pl-16 rounded-full w-full text-sm md:text-lg font-medium font-cincel" 
              style={{textShadow: 'rgba(0, 0, 0, 0.59) 2px 1px 2px',  
               boxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)", 
-        webkitBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)",
-            mozBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)"}}>
+        WebkitBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)",
+            MozBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)"}}>
               {text}
             </div>
             <div className="absolute right-[-25px] md:right-[-15px] w-12 h-12 flex items-center justify-center bg-[#1A1A1A] text-white font-bold rounded-full text-lg border-4 border-[#1A1A1A] text-[22px]" style={{textShadow: 'rgba(0, 0, 0, 0.59) 2px 1px 2px'}}>
