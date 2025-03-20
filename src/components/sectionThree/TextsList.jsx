@@ -18,7 +18,7 @@ const texts = [
             className="relative flex justify-center items-center w-full bg-cover bg-center text-center "
             style={{ backgroundImage: "url('/OFERTA.png')", width: "105%", height: 50 }}
           >
-            <p className="w-[94%] text-white font-sans text-[13px] text-center">
+            <p className="w-[94%] text-white font-sans text-[12px] text-center">
               {text}
             </p>
           </div>

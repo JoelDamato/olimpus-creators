@@ -10,6 +10,7 @@ export function ColumnBg() {
         <div
           className="relative w-full flex flex-col items-center p-1 text-center bg-cover bg-top"
           style={{ backgroundImage: "url('/COLUMNAS.png')", height: "67vh" }}
+          //si le pongo mas vh se pierde el texto de la imagen
         >
           <TextsList />
           <Prices/>
@@ -20,9 +21,9 @@ export function ColumnBg() {
             />
           </div>
 
-          <div className="w-3/4">
+          {/* <div className="w-3/4">
             <Guarantee />
-          </div>
+          </div> */}
         </div>
       </div>
     </>
