@@ -2,7 +2,7 @@ export default function Description(){
 
     return(
       <>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-3 w-full">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-2 w-full">
   <p
     className="text-center md:text-center text-lg max-w-4xl leading-normal text-[15px] sm:text-[24px] md:text-[34px] font-sans"
     style={{

@@ -7,13 +7,11 @@ export function ColumnBg() {
   return (
     <>
       <div className="bg-olimpusBlue text-white md:p-8">
-        {/* <img src='/ZEUS_APUNTANDO.png' alt=''/>  */}
         <div
           className="relative w-full flex flex-col items-center p-1 text-center bg-cover bg-top"
           style={{ backgroundImage: "url('/COLUMNAS.png')", height: "67vh" }}
           //si le pongo mas vh se pierde el texto de la imagen
         >
-        
           <TextsList />
           <Prices/>
           <div className="w-5/6">

@@ -12,10 +12,14 @@ export default function ViralitySectionOne() {
           "FILTROS 4K PARA IMPACTAR Y RETENER EN TODOS TUS VIDEOS."
         ].map((text, index) => (
           <div key={index} className="relative flex items-center " >
-            <div className="absolute -left-5 md:-left-6 w-12 h-12 flex items-center justify-center bg-black text-white font-bold rounded-full text-lg border-4 border-black text-[22px]" style={{textShadow: 'rgba(0, 0, 0, 0.59) 2px 1px 2px'}}>
+            <div className="absolute -left-5 md:-left-6 w-12 h-12 flex items-center justify-center bg-[#1A1A1A] text-white font-bold rounded-full text-lg border-4 border-[#1A1A1A] text-[22px]" style={{textShadow: 'rgba(0, 0, 0, 0.59) 2px 1px 2px'}}>
               {index + 1}
             </div>
-            <div className="text-[14px] bg-black text-white p-2 pl-8 pr-4 md:text-[24px] md:pl-16 rounded-full w-full text-sm md:text-lg font-medium font-cincel" style={{textShadow: 'rgba(0, 0, 0, 0.59) 2px 1px 2px'}}>
+            <div className="text-[14px] bg-[#1A1A1A] text-white p-2 pl-8 pr-4 md:text-[24px] md:pl-16 rounded-full w-full text-sm md:text-lg font-medium font-cincel" 
+            style={{textShadow: 'rgba(0, 0, 0, 0.59) 2px 1px 2px',  
+            boxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)", 
+      webkitBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)",
+          mozBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)"}}>
               {text}
             </div>
           </div>
