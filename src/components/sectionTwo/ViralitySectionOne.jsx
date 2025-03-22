@@ -20,6 +20,7 @@ export default function ViralitySectionOne() {
             boxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)", 
       WebkitBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)",
           MozBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)"}}>
+
               {text}
             </div>
           </div>

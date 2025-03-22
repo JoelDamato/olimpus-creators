@@ -15,6 +15,7 @@ export default function FooterImages() {
           className="absolute left-0 w-[9.5%] max-w-[100px] top-[-35px]"
         />
         <div className="flex justify-center items-center w-[70%] gap-2 mb-1">
+
           <img src="https://i.ibb.co/67934NsP/PODCAST.png" alt="CTA 2" className="w-[25%] max-w-[80px] object-contain" />
           <img src="https://i.ibb.co/zTfWB7cc/ZEUS-FESTEJANDO.png" alt="CTA 3" className="w-[25%] max-w-[80px] object-contain" />
           <img src="https://i.ibb.co/273wtDSV/DRONE.png" alt="CTA 4" className="w-[25%] max-w-[80px] object-contain" />

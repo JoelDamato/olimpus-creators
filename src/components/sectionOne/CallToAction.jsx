@@ -17,7 +17,6 @@ export default function CallToAction() {
           <UnblockNow/>
           <div className="relative w-full max-w-4xl mt-[-20px]">
             <img src="https://i.ibb.co/d4RyDk5W/CTA-2.png" alt="CTA 2" className="w-full" />
-
             <div className="absolute top-[10%] left-0 right-0 text-center text-white text-3xl sm:text-4xl md:text-7xl font-cincel">
               4.95/5
             </div>
