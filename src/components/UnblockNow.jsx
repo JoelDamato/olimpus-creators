@@ -9,7 +9,7 @@ export default function UnblockNow({
 
     return(<>
      <div className="relative w-full max-w-4xl">
-            <img src="/CTA-1.PNG" alt="CTA 1" className="w-full" />
+            <img src="https://i.ibb.co/4ZVTPYyC/CTA-1.png" alt="CTA 1" className="w-full" />
             <div className={`absolute inset-0 flex items-center justify-end ${padding} text-white font-bold font-cincel ${textSize}`} >
             {!textPart2 && !textPart3 ? (
             textPart1
