@@ -10,18 +10,19 @@ export default function FooterImages() {
 
       <div className="relative flex justify-center items-center w-full mt-2">
         <img
-          src="/COLUMNA_1.PNG"
+          src="https://i.ibb.co/C3HSQcSB/COLUMNA-1.png"
           alt="Columna izquierda"
           className="absolute left-0 w-[9.5%] max-w-[100px] top-[-35px]"
         />
         <div className="flex justify-center items-center w-[70%] gap-2 mb-1">
-          <img src="/PODCAST.PNG" alt="CTA 2" className="w-[25%] max-w-[80px] object-contain" />
-          <img src="/ZEUS_FESTEJANDO.PNG" alt="CTA 3" className="w-[25%] max-w-[80px] object-contain" />
-          <img src="/DRONE.PNG" alt="CTA 4" className="w-[25%] max-w-[80px] object-contain" />
-          <img src="/FOTOGRAFIA.PNG" alt="CTA 5" className="w-[25%] max-w-[80px] object-contain" />
+
+          <img src="https://i.ibb.co/67934NsP/PODCAST.png" alt="CTA 2" className="w-[25%] max-w-[80px] object-contain" />
+          <img src="https://i.ibb.co/zTfWB7cc/ZEUS-FESTEJANDO.png" alt="CTA 3" className="w-[25%] max-w-[80px] object-contain" />
+          <img src="https://i.ibb.co/273wtDSV/DRONE.png" alt="CTA 4" className="w-[25%] max-w-[80px] object-contain" />
+          <img src="https://i.ibb.co/gMCYX08N/FOTOGRAFIA.png" alt="CTA 5" className="w-[25%] max-w-[80px] object-contain" />
         </div>
         <img
-          src="/COLUMNA_2.PNG"
+          src="https://i.ibb.co/ns2fJBpB/COLUMNA-2.png"
           alt="Columna derecha"
           className="absolute right-0 w-[8%] max-w-[100px]  top-[-36px]"
         />

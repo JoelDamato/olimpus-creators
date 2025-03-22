@@ -26,7 +26,7 @@ export default function Header() {
           </p>
         </div>
         <img
-          src="/ZEUS-HEAD.PNG"
+          src="https://i.ibb.co/BV7g9HHD/ZEUS-HEAD.png"
           alt="Zeus con celular"
            className="w-[65%] md:w-1/3 object-cover absolute right-[-20%] top-[-20%] md:right-0 md:top-0"
         />

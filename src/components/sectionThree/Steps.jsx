@@ -67,7 +67,7 @@ export default function Steps() {
           <img src="/FLECHA_DER.png" alt="Flecha derecha" className="w-6 h-6" />
         </button>
            <img
-                    src="/zeus_apuntando.png"
+                    src="https://i.ibb.co/96fFs82/ZEUS-APUNTANDO.png"
                     alt="Zeus Apuntando"
                   className="absolute right-[-80px] top-[45%] w-[80px] w-20 h-30 md:w-[120px]"
                   />
