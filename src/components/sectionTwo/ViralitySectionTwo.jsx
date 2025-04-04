@@ -11,7 +11,7 @@ export default function ViralitySectionTwo() {
           "MONETIZA VIDEOS VIRALES EN 2025 CON EL MÉTODO VRV."
         ].map((text, index) => (
           <div key={index} className="relative flex items-center" >
-            <div className="text-[14px] bg-[#1A1A1A] text-white p-2 pl-8 pr-4 md:pl-16 rounded-full w-full text-sm md:text-lg font-medium font-cincel" 
+            <div className="text-[13px] bg-[#1A1A1A] text-white p-1 pl-8 pr-4 md:pl-16 rounded-full w-full md:text-lg font-medium font-cincel" 
              style={{textShadow: 'rgba(0, 0, 0, 0.59) 2px 1px 2px',  
               boxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)", 
         WebkitBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)",
@@ -24,7 +24,7 @@ export default function ViralitySectionTwo() {
           </div>
         ))}
       </div>
-      <div className="w-1/3 md:w-1/3 flex justify-center">
+      <div className="w-1/3 md:w-1/3 flex justify-center overflow-hidden">
         <img src="/FLOW-CON-IPHONE.png" alt="Figura viral" className="w-full max-w-xs md:max-w-sm mr-[-30%]"  />
       </div>
       </div>

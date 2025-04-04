@@ -5,10 +5,12 @@ import Guarantee from "../components/sectionTwo/Guarantee";
 export function Package() {
   return (
     <>
+    <div className="overflow-hidden">
       <Steps />
       <ColumnBg />
-      <div className="bg-secondary w-full p-1 ">
+      <div className="bg-secondary w-full">
         <Guarantee />
+      </div>
       </div>
     </>
   );
