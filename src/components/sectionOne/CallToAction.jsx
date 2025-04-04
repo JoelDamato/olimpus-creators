@@ -30,7 +30,7 @@ export default function CallToAction() {
       href="https://pay.hotmart.com/F98750477I?checkoutMode=10"
       target="_blank"
       rel="noopener noreferrer"
-      // className="block w-full max-w-4xl"
+      className="block w-full max-w-4xl"
     > 
               <p className="inline-flex items-center gap-1" >
     Desbloquear el Olimpo de la Viralidad  
