@@ -26,8 +26,17 @@ export default function CallToAction() {
             </div>
 
             <div className="absolute bottom-[13%] left-0 right-0 text-center text-[#90766A] font-normal  text-[11px] md:text-4xl font-sans">
+              <a
+      href="https://pay.hotmart.com/F98750477I?checkoutMode=10"
+      target="_blank"
+      rel="noopener noreferrer"
+      // className="block w-full max-w-4xl"
+    > 
               <p className="inline-flex items-center gap-1" >
-                Desbloquear el Olimpo de la Viralidad  <ArrowRightIcon className=" w-3 h-3 text-[#90766A]" /></p>
+    Desbloquear el Olimpo de la Viralidad  
+    <ArrowRightIcon className=" w-3 h-3 text-[#90766A]" />
+    </p>
+    </a>
             </div>
           </div>
         </div>
