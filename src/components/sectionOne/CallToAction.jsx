@@ -4,7 +4,7 @@ import UnblockNow from "../UnblockNow";
 export default function CallToAction() {
   return (
     <>
-      <div className="flex flex-row md:flex-row items-center justify-center mt-2 w-full gap-2">
+      <div className="flex flex-row md:flex-row items-center justify-center mt-2 w-full gap-2 overflow-hidden">
         <div className="w-1/3 md:w-1/3 flex justify-center">
           <img
             src="https://i.ibb.co/S4DJpdh8/HERMES-MAC-AZUL.png"
@@ -21,11 +21,11 @@ export default function CallToAction() {
               4.95/5
             </div>
 
-            <div className="absolute bottom-[21%] left-0 right-0 text-center text-white font-normal text-[13px] md:text-4xl font-sans">
+            <div className="absolute bottom-[30%] left-0 right-0 text-center text-white font-normal text-[10px] md:text-4xl font-sans">
               9 de cada 10 NO tienen acceso a nuestros clips...
             </div>
 
-            <div className="absolute bottom-[10%] left-0 right-0 text-center text-[#90766A] font-normal  text-[13px] md:text-4xl font-sans">
+            <div className="absolute bottom-[13%] left-0 right-0 text-center text-[#90766A] font-normal  text-[11px] md:text-4xl font-sans">
               <p className="inline-flex items-center gap-1" >
                 Desbloquear el Olimpo de la Viralidad  <ArrowRightIcon className=" w-3 h-3 text-[#90766A]" /></p>
             </div>

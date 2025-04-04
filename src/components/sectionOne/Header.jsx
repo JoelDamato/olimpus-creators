@@ -2,7 +2,7 @@ export default function Header() {
   return (
     <>
       <div 
-      className="relative w-full  flex flex-col items-center md:flex-row lg:justify-start md:justify-center"
+      className="relative w-full  flex flex-col items-center md:flex-row lg:justify-start md:justify-center "
       >
         <div 
         className="flex flex-col lg:w-2/4 xl:w-2/4"
@@ -14,7 +14,7 @@ export default function Header() {
             className="w-4/6 md:w-3/4 object-cover"
           />
           <p
-            className="text-start mt-3 text-[25px] sm:text-[40px] md:text-[55px] md:m-9 font-cincel"
+            className="text-start mt-3 text-[20px] sm:text-[40px] md:text-[55px] md:m-9 font-cincel"
             style={{
               zIndex:5,
               color: "fff",
@@ -26,7 +26,7 @@ export default function Header() {
           </p>
         </div>
         <img
-          src="https://i.ibb.co/BV7g9HHD/ZEUS-HEAD.png"
+          src="https://i.ibb.co/BV7g9HHD/ZEUS-HEAD-CUT.png"
           alt="Zeus con celular"
            className="w-[65%] md:w-1/3 object-cover absolute right-[-20%] top-[-20%] md:right-0 md:top-0"
         />

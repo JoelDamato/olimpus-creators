@@ -7,13 +7,13 @@ import Guarantee from "../components/sectionTwo/Guarantee";
 
 export default function About() {
   return (
-    <div className="bg-primary flex flex-col items-center justify-center  w-full gap-2 mt-[-2%]">
+    <div className="bg-primary flex flex-col items-center justify-center  w-full gap-2 mt-[-2%] overflow-hidden">
       <ViralityTitle />
       <ViralitySectionOne />
       <ViralitySectionTwo />
-      <div className="w-4/5 flex justify-center">
+      <div className="w-4/5 mt-2 flex justify-center">
         <UnblockNow
-          textSize="text-[16px] md:text-[40px]"
+          textSize="text-[14px] md:text-[40px]"
           padding="mr-4 md:mr-12"
         />
       </div>
