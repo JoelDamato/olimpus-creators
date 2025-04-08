@@ -11,10 +11,10 @@ export default function ViralitySectionTwo() {
           "MONETIZA VIDEOS VIRALES EN 2025 CON EL MÉTODO VRV."
         ].map((text, index) => (
           <div key={index} className="relative flex items-center" >
-            <div className="text-[13px] bg-[#1A1A1A] text-white p-1 pl-8 pr-4 md:pl-16 rounded-full w-full md:text-lg font-medium font-cincel" 
-             style={{textShadow: 'rgba(0, 0, 0, 0.59) 2px 1px 2px',  
+            <div className="text-[80%] bg-[#1A1A1A] text-white p-1 pl-8 pr-4 md:pl-16 rounded-full w-full md:text-lg font-medium font-cincel" 
+             style={{
               boxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)", 
-        WebkitBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)",
+              WebkitBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)",
             MozBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)"}}>
               {text}
             </div>

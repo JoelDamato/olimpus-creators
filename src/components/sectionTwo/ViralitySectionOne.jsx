@@ -9,7 +9,7 @@ export default function ViralitySectionOne() {
             className="w-full max-w-xs md:max-w-sm ml-[-30%]"
           />
         </div>
-        <div className="w-2/3 md:w-2/4 flex flex-col gap-3 md:gap-6 relative">
+        <div className="w-2/3 md:w-2/4 flex flex-col gap-3 md:gap-6 relative ">
           {[
             "MÁS DE 50 000 CLIPS PREMIUM PARA TIKTOK Y REELS.",
             "GUÍA VIRAL: ESTRATEGIAS COMPROBADAS PARA VIRALIZAR.",
@@ -23,14 +23,13 @@ export default function ViralitySectionOne() {
                 {index + 1}
               </div>
               <div
-                className="text-[13px] bg-[#1A1A1A] text-white p-1 pl-8 pr-4 md:text-[24px] md:pl-16 rounded-full w-full md:text-lg font-medium font-cincel"
+                className="text-[80%] bg-[#1A1A1A] text-white p-1 pl-8 md:text-[24px] md:pl-16 rounded-full w-full md:text-lg font-cincel"
                 style={{
-                  textShadow: "rgba(0, 0, 0, 0.59) 2px 1px 2px",
-                  boxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)",
-                  WebkitBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)",
-                  MozBoxShadow: "10px 7px 0px -4px rgba(0,0,0,0.6)",
+                  boxShadow: "2px 5px 1px 0px rgba(0,0,0,0.6)",
+                  WebkitBoxShadow: " 2px 5px 0px 0px rgba(0,0,0,0.6)",
+                  MozBoxShadow: "2px 5px 1px 0px rgba(0,0,0,0.6)"
                 }}
-              >
+                >
                 {text}
               </div>
             </div>
