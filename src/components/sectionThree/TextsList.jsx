@@ -9,32 +9,52 @@ const texts = [
 
 export function TextsList({ package2 = false }) {
   return (
-    <div
-      className={`w-full ${
-        !package2 ? "mt-[6rem]" : "mt-[-15px] p-1"
-      } flex flex-col items-center space-y-[-5px]`}
-    >
-      {
-        <p className="font-cincel text-[3.2cqw] text-white mb-1 z-30"  style={{ textShadow: "1px 2px 1px rgb(0, 0, 0)" }}>
-          {" "}
-          ¿QUÉ ES LO QUE OBTIENES EN ESTE PAQUETE EXCLUSIVO?
-        </p>
-      }
-      {texts.map((text, index) => (
-        <div
-          key={index}
-          className="relative flex justify-center items-center w-full bg-cover bg-center text-center  "
-          style={{
-            backgroundImage: `url('${package2 ? "/OFERTA-2.png" : "/OFERTA.png"}')`,
-            width: "100%",
-            height: 38,
-          }}
-        >
-          <p className="w-[92%] text-white font-sans text-[10px] text-center">
-            {text}
+    <>
+      {package2 ? (
+        <div className="w-full mt-[6rem] p-1 flex flex-col items-center space-y-[-5px]">
+          <p
+            className="font-cincel text-[3.2cqw] text-white mb-1 z-30"
+            style={{ textShadow: "1px 2px 1px rgb(0, 0, 0)" }}
+          >
+            {" "}
+            ¿QUÉ ES LO QUE OBTIENES EN ESTE PAQUETE EXCLUSIVO?
           </p>
+
+          {texts.map((text, index) => (
+            <div
+              key={index}
+              className="relative flex justify-center items-center w-full bg-cover bg-center text-center  "
+              style={{
+                backgroundImage: `url("/OFERTA-2.png")`,
+                width: "100%",
+                height: 38,
+              }}
+            >
+              <p className="w-[92%] text-white font-sans text-[10px] text-center">
+                {text}
+              </p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      ) : (
+        <div className="w-full mt-[6rem] flex flex-col items-center space-y-[-5px]">
+          {texts.map((text, index) => (
+            <div
+              key={index}
+              className="relative flex justify-center items-center w-full bg-cover bg-center text-center "
+              style={{
+                backgroundImage: "url('/OFERTA.png')",
+                width: "105%",
+                height: 50,
+              }}
+            >
+              <p className="w-[94%] text-white font-sans text-[10px] text-center">
+                {text}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
+    </>
   );
 }
