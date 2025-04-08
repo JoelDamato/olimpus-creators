@@ -2,7 +2,7 @@ export default function ViralityTitle() {
   return (
     <>
  <div className="flex items-center justify-center w-full mt-4 md:mt-9 gap-1 overflow-hidden">
-  <div className="w-1/4 md:w-1/3 flex justify-center">
+  <div className="w-1/4 md:w-1/3 flex justify-center p-1">
     <img src="/LOGO.png" className="max-h-24 md:max-h-40" alt="logo-olimpus" />
   </div>
   <div className="w-3/4 md:w-2/3 flex flex-col items-center justify-start md:gap-6 ">
