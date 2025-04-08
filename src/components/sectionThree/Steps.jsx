@@ -32,7 +32,7 @@ export default function Steps({ package2 = false }) {
         package2 ? "bg-transparent" : "bg-secondary"
       } flex flex-col items-center mb-[-10px] z-10`}
     >
-      <div className="flex mt-[-10px] md:flex gap-4 justify-center items-center relative h-[200px]">
+      <div className="flex  md:flex gap-1 justify-center items-center relative h-[200px]">
         <button
           onClick={prevSlide}
           className="absolute left-[-35px] top-1/2 -translate-y-1/2  bg-black/20  hover:bg-black/20 rounded-full p-1 z-10"

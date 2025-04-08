@@ -17,7 +17,7 @@ export function Package2() {
         <Steps package2 />
         <ColumnBg2  package2/>
         <div className=" w-full">
-          <Guarantee />
+          <Guarantee package2 />
         </div>
       </div>
     </>

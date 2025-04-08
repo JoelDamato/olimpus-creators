@@ -30,7 +30,7 @@ export function TextsList({ package2 = false }) {
             height: 38,
           }}
         >
-          <p className="w-[94%] text-white font-sans text-[10px] text-center">
+          <p className="w-[92%] text-white font-sans text-[10px] text-center">
             {text}
           </p>
         </div>
