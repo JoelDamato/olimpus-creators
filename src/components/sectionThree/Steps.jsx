@@ -10,7 +10,7 @@ const clips = [
   "/clip7.mp4",
 ];
 
-export default function Steps() {
+export default function Steps({ package2 = false }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = useCallback(() => {
@@ -27,8 +27,12 @@ export default function Steps() {
   }, [nextSlide]);
 
   return (
-    <section className="relative bg-secondary flex flex-col items-center mb-[-10px]">
-      <div className="flex md:flex gap-6 justify-center items-center relative h-[200px]">
+    <section
+      className={`relative ${
+        package2 ? "bg-transparent" : "bg-secondary"
+      } flex flex-col items-center mb-[-10px] z-10`}
+    >
+      <div className="flex mt-[-10px] md:flex gap-4 justify-center items-center relative h-[200px]">
         <button
           onClick={prevSlide}
           className="absolute left-[-35px] top-1/2 -translate-y-1/2  bg-black/20  hover:bg-black/20 rounded-full p-1 z-10"
@@ -66,11 +70,11 @@ export default function Steps() {
         >
           <img src="/FLECHA_DER.png" alt="Flecha derecha" className="w-6 h-6" />
         </button>
-           <img
-                    src="https://i.ibb.co/96fFs82/ZEUS-APUNTANDO.png"
-                    alt="Zeus Apuntando"
-                  className="absolute right-[-80px] top-[45%] w-[80px] w-20 h-30 md:w-[120px]"
-                  />
+        <img
+          src="https://i.ibb.co/96fFs82/ZEUS-APUNTANDO.png"
+          alt="Zeus Apuntando"
+          className="absolute right-[-65px] top-[55%] w-[80px] w-14 h-20 md:w-[120px]"
+        />
       </div>
     </section>
   );
