@@ -37,7 +37,7 @@ export default function Guarantee({ package2 = false }) {
           className="w-full flex  items-center justify-center"
         >
           <div
-            className="w-[90%] flex  items-center justify-center gap-1 p-3 md:p-6 md:flex-row"
+            className="w-[80%] flex  items-center justify-center gap-1 p-3 md:p-6 md:flex-row"
           >
             {[
               { img: "/TIEMPO.png", text: "ACCESO INSTANTÁNEO", width: "26%" },

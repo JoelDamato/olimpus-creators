@@ -10,7 +10,7 @@ export function Package2() {
          style={{
            backgroundImage: "url('https://i.ibb.co/C3HSQcSB/COLUMNA-1.png')",
            backgroundRepeat: "no-repeat",
-           backgroundPosition: "-35px top",
+           backgroundPosition: "-45px top",
            zIndex: 30,
          }}
       >

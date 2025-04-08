@@ -15,7 +15,7 @@ export function TextsList({ package2 = false }) {
       } flex flex-col items-center space-y-[-5px]`}
     >
       {
-        <p className="font-cincel text-[3.2cqw] text-white mb-1 z-30">
+        <p className="font-cincel text-[3.2cqw] text-white mb-1 z-30"  style={{ textShadow: "1px 2px 1px rgb(0, 0, 0)" }}>
           {" "}
           ¿QUÉ ES LO QUE OBTIENES EN ESTE PAQUETE EXCLUSIVO?
         </p>
