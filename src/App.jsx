@@ -8,18 +8,28 @@ import FooterImages from './components/footer/FooterImages';
 
 function App() {
   return (
-  //   <Routes>
-  //   <Route path="/" element={<Home />} />
-  // </Routes>
-      <div>
+    <>
+    <Routes>
+     <Route 
+     path="/" 
+     element={<>
       <Home />
       <About />
       <Package />
-      {/* <Package2 /> */}
       <FooterImages />
       <Footer />
-    </div>
-
+     </>} />
+     <Route 
+     path="/2" 
+     element={<>
+      <Home />
+      <About />
+      <Package2 />
+      <FooterImages />
+      <Footer />
+     </>} />
+   </Routes> 
+      </>
   );
 }
 

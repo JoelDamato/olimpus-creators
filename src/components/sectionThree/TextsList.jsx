@@ -11,7 +11,7 @@ export function TextsList({ package2 = false }) {
   return (
     <>
       {package2 ? (
-        <div className="w-full mt-[6rem] p-1 flex flex-col items-center space-y-[-5px]">
+        <div className="w-full p-1 flex flex-col items-center space-y-[-5px]">
           <p
             className="font-cincel text-[3.2cqw] text-white mb-1 z-30"
             style={{ textShadow: "1px 2px 1px rgb(0, 0, 0)" }}
@@ -44,7 +44,7 @@ export function TextsList({ package2 = false }) {
               className="relative flex justify-center items-center w-full bg-cover bg-center text-center "
               style={{
                 backgroundImage: "url('/OFERTA.png')",
-                width: "105%",
+                width: "99%",
                 height: 50,
               }}
             >

@@ -73,7 +73,7 @@ export default function Steps({ package2 = false }) {
         <img
           src="https://i.ibb.co/96fFs82/ZEUS-APUNTANDO.png"
           alt="Zeus Apuntando"
-          className="absolute right-[-65px] top-[55%] w-[80px] w-14 h-20 md:w-[120px]"
+          className={package2 ? "absolute right-[-65px] top-[55%] w-[80px] w-14 h-20 md:w-[120px]" : "absolute right-[-80px] top-[45%] w-[80px] w-20 h-30 md:w-[120px]"}
         />
       </div>
     </section>
