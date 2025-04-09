@@ -6,7 +6,7 @@ export function Package2() {
   return (
     <>
       <div
-         className="overflow-hidden bg-secondary bg-no-repeat bg-left-top bg-contain h-[80vh]"
+         className="overflow-hidden bg-secondary bg-no-repeat bg-left-top bg-contain "
          style={{
            backgroundImage: "url('https://i.ibb.co/C3HSQcSB/COLUMNA-1.png')",
            backgroundRepeat: "no-repeat",
