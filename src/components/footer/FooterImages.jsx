@@ -14,7 +14,7 @@ export default function FooterImages() {
           className=" absolute left-0 h-full object-contain z-20"
         />
         <div className="flex flex-col items-center">
-        <p className="font-sans font-bold text-white text-[2.7cqw] uppercase "   
+        <p className="font-sans font-bold text-white text-[2.6cqw] uppercase z-30 "   
       style={{textShadow: "rgba(0, 0, 0, 0.4) 0px 2px 2px"}}>
         En 2025 sin importar qué hagas, importa cómo lo muestres
       </p> 
