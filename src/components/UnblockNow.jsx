@@ -20,7 +20,7 @@ export default function UnblockNow({
 
   return (
     <a
-     href={scrollToId ? `#${scrollToId}` : "https://pay.hotmart.com/F98750477I?checkoutMode=10"}
+     href={scrollToId ? `#${scrollToId}` : "https://pay.hotmart.com/F98750477I?checkoutMode=10&bid=1744301313767"}
      onClick={handleClick}
      target="_blank"
       rel="noopener noreferrer"

@@ -31,18 +31,9 @@ export default function Header() {
            className="w-[65%] md:w-1/3 object-cover absolute right-[-20%] top-[-20%] md:right-0 md:top-0"
         />
       </div>
-      <div className="relative flex justify-center items-center md:items-center md:justify-start bg-[#1A1A1A] p-[15px] " style={{ zIndex: 5 }}>
+      <div className="relative flex justify-center items-center md:items-center md:justify-start " style={{ zIndex: 5 }}>
       <div className="relative w-full md:w-2/4">
-        <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        src={"/VIDEO_HEADER.mp4"}
-          alt="video_header"
-          className="w-4/4 md:w-2/4 "
-          style={{ zIndex: 5 }}
-        />
+      <iframe id="panda-173ce449-8b70-480a-b20a-aae9f53f770f" src="https://player-vz-7cd4a4ef-9e2.tv.pandavideo.com/embed/?v=173ce449-8b70-480a-b20a-aae9f53f770f&autoplay=true&loop=true&muted=true"  style={{border:"none"}} allowfullscreen="true" width="345" height="230" fetchpriority="high"></iframe>
       </div>
       </div>
     </>
